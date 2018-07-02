@@ -2,110 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-        *
-        {
-            box-sizing: border-box;
-        }
-        html, body, section
-        {
-            height: 100%;
-            width: 100%;
-            margin:auto;
+    <link rel="stylesheet" type="text/css" href="Exercise%20Bbž.css">
 
-        }
-        body
-        {
-            background-color: pink;
-            z-index: -1;
-        }
-        h1, p
-        {
-            padding-bottom: 10px;
-        }
-        .p
-        {
-            text-align: left;
-            color:grey;
-        }
-        .welcomepic
-        {
-            background-image: url("Wedding-1pic.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-        }
-        .welcomepictext
-        {
-            height: 20%;
-            text-align: center;
-            color:white;
-            font-size: 35px;
-            position:absolute;
-            top:35%;
-            left:40%;
-            font-family: cursive;
-        }
-        .historypic
-        {
-            width: 60%;
-            height: 60%;
-            position:absolute;
-            left:20%;
-            text-align: center;
-            color:grey;
-            font-family: cursive;
-        }
-        .weddingbutton
-        {
-            padding:2% 5%;
-            background-color:black;
-            color:white;
-            border-radius: 5%;
-            text-align: center;
-            text-decoration: none;
-            position:absolute;
-            top:215%;
-            left:40%;
-        }
-        .flowerpic
-        {
-            height: 100%;
-            width: 100%;
-            background-image: url("Flowers_3pic.jpg");
-            background-size: cover;
-            position: absolute;
-            top:240%;
-        }
-        .flowerpicinfo
-        {
-            height:50%;
-            width:40%;
-            font-size: 50px;
-            font-family: cursive;
-            color:white;
-            position: absolute;
-            text-align: center;
-            top:40%;
-            left:30%
-        }
-        .weddingroom
-        {
-            position: absolute;
-            top:340%;
-            font-size: 35px;
-            color:grey;
-            text-align: center;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+
 </head>
 
 <body>
-    <section>
+
         <div class="welcomepic">
             <div class="welcomepictext">
                 <h1>Jane & John</h1>
@@ -113,34 +16,65 @@
                 <p>17.07.2017</p>
             </div>
         </div>
+
         <div class="historypic">
             <h1>Jane & John</h1>
-            <img src="Wedding_2pic.jpg" alt="Wedding kiss">
+            <br><br>
+            <img src="Wedding_2pic.jpg" class="imgweddingkiss" alt="Wedding kiss">
             <p></p>
-            <p class="p">
+            <div class="historypictext">
+                <p class="p">
                 You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur
                 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                 ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+                </p>
+            </div>
         </div>
-        <div>
+
+        <div class="weddingbuttondiv">
             <h3><a href="#" class="weddingbutton">Wedding details</a></h3>
         </div>
+
         <div class="flowerpic">
             <div class="flowerpicinfo">
                 <h1>You Are Invited</h1>
                 <h4>Of course..</h4>
             </div>
         </div>
+
         <div class="weddingroom">
-            <p></p>
+            <br>
             <p>THE WEDDING</p>
-            <p></p>
-            <img src="Wedding_4pic.jpg" alt="Wedding room">
+            <br>
+            <img src="Wedding_4pic.jpg" class="imgweddingroom" alt="Wedding room">
         </div>
-    </section>
+
+        <div class="sectionwedding">
+            <div class="when">
+                <h1>When</h1>
+                <p>Wedding Ceremony - 2:00pm</p>
+                <p>Reception & Dinner - 5:00pm</p>
+            </div>
+            <div class="where">
+                 <h1>Where</h1>
+                 <p>Some place, an adress</p>
+                 <p>Some where, some adress</p>
+            </div>
+        </div>
+
+        <div class="rsvp">
+                <h1>HOPE YOU CAN MAKE IT</h1>
+                <p>Kindly Respond By January, 2017</p>
+                <br>
+                <h2><a href="#" class="rsvpbutton">RSVP</a></h2>
+        </div>
+
+        <footer class="footer">
+            Powered by <a href="#" class="footerlink">w3.css</a>
+        </footer>
+
 </body>
 </html>
