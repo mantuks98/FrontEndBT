@@ -1,157 +1,280 @@
 
-*
-{
+* {
     box-sizing: border-box;
 }
-html, body
-{
+
+html, body {
     height: 100%;
+    font-family: "Raleway", sans-serif;
+    margin: auto;
 }
-body
-{
+
+.body1{
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 70px;
+
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.h2bold {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 45px;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+body {
     background-color: #f2e1e1;
-    margin:auto;
+    margin: auto;
+}
+
+.imgweddingroom {
+    object-fit: cover;
+    width: 80%;
+    height: 70%;
+}
+
+.imgweddingkiss {
+    object-fit: cover;
+    width: 70%;
+    height: 50%;
 
 }
 
-.imgweddingroom
-{
-    object-fit: cover;
+.p {
+    color: grey;
+}
+
+.historypictext {
     width: 70%;
-    height: 75%;
-}
-.imgweddingkiss
-{
-    object-fit: cover;
-    width: 70%;
-    height:50%;
-}
-.p
-{
-    color:grey;
-}
-.historypictext
-{
-    width:60%;
     text-align: left;
-    margin:auto;
-    font-style:italic;
+    margin: auto;
+    font-style: italic;
 }
-.welcomepic
-{
+
+.welcomepic {
     background-image: url("Wedding-1pic.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
     position: relative;
-    top:-6.5%;
+    top: -6.5%;
+    filter: grayscale(50%);
+
 }
-.welcomepictext
-{
+
+.welcomepictext {
     height: 20%;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 35px;
-    font-family: cursive;
-    position:relative;
-    top:40%;
+    position: relative;
+    top: 40%;
 }
-.historypic
-{
+
+.historypic {
     text-align: center;
-    color:grey;
-    font-family: cursive;
-    border: 2px blue solid;
+    color: grey;
+    filter: grayscale(70%);
+
 }
-.weddingbutton
-{
-    padding: 2% 5%;
+
+.weddingbutton {
+    padding: 2vmax 5vmax;
     background-color: black;
+    color: white;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.weddingbuttondiv {
+    height: 20vmax;
+    position: relative;
+}
+
+.weddingbuttonposition {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rsvpbutton {
+    padding: 3% 10%;
+    background-color: #f88179;
     color: white;
     border-radius: 5%;
     text-align: center;
     text-decoration: none;
-    position:relative;
-    top:40%;
-    left:40%;
 }
-.weddingbuttondiv
-{
-    height: 40%;
-    border: 2px solid red;
-}
-.rsvpbutton
-{
-    padding:1.5% 5%;
-    background-color: #f88179;
-    color:white;
-    border-radius: 5%;
+
+.rsvp {
+    background-color: #ffdddd;
     text-align: center;
-    text-decoration: none;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    position: relative;
+
 }
-.rsvp
-{
-    height:55%;
-    background-color: #fdd;
-    text-align: center;
-    padding-top: 5%;
+
+.rsvpposition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.flowerpic
-{
+
+.rsvp-spacing {
+    letter-spacing: 0.5vmax;
+    font-size: 33px;
+}
+
+.rsvp-spacing2 {
+    letter-spacing: 0.3vmax;
+}
+
+.flowerpic {
     height: 100%;
     width: 100%;
     background-image: url("Flowers_3pic.jpg");
     background-size: cover;
+    position: relative;
 
 }
-.flowerpicinfo
-{
-    height:50%;
-    width:100%;
-    font-size: 3vmax;
-    font-family: cursive;
-    color:white;
-    text-align: center;
-    position: relative;
-    top:40%;
-}
-.weddingroom
-{
-    font-size: 35px;
-    color:grey;
-    text-align: center;
-    height: 130%;
+
+.flowerpicinfo {
+    height: 50%;
     width: 100%;
-}
-.sectionwedding
-{
-    display:flex;
-    width:100%;
-    height:30%;
-}
-.when
-{
+    font-size: 3vmax;
+    color: white;
     text-align: center;
-    width:50%;
-    position:relative;
-    left:10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.where
-{
+
+.weddingroom {
+    color: grey;
+    text-align: center;
+    filter: grayscale(70%);
+}
+
+.sectionwedding {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    position: relative;
+}
+
+.when {
     text-align: center;
     width: 50%;
-    position:relative;
-    right:10%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+
 }
-.footer
-{
+
+.where {
+    text-align: center;
+    width: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+}
+
+.footerdiv {
     background-color: black;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 15px;
-    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
-.footerlink
-{
-    color:white;
+
+.footerlink {
+    color: white;
+}
+
+.footerposition {
+    padding-top: 1.65vmax;
+    padding-bottom: 1.65vmax;
+    color: white;
+    background-color: white;
+}
+
+.nav {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    border: 10px solid rgba(255, 255, 255, 0.9);
+    border-collapse: collapse;
+}
+
+.nav1 {
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.nav2 {
+    height: 100%;
+    float: left;
+    width: 25%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.nav1:hover {
+    color: black;
+    background-color: lightgray;
+}
+
+.nav2:hover {
+    color: white;
+    background-color: black;
+}
+
+.nav:hover {
+    background-color: white;
+}
+
+.footerlink:hover {
+    color: green;
 }
