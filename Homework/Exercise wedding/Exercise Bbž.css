@@ -4,15 +4,13 @@
 }
 
 html, body {
-    height: 100%;
     font-family: "Raleway", sans-serif;
     margin: auto;
+    height: 100%;
+    width: 980px;
 }
 
-.body1{
-    width: 100%;
-    margin: auto;
-}
+
 
 h1 {
     font-size: 70px;
@@ -78,7 +76,6 @@ body {
     background-image: url("Wedding-1pic.jpg");
     background-size: cover;
     height: 100%;
-    width: 100%;
     position: relative;
     top: -6.5%;
     filter: grayscale(50%);
@@ -235,29 +232,27 @@ body {
     bottom: 0;
     position: fixed;
     width: 100%;
-    border: 10px solid rgba(255, 255, 255, 0.9);
-    border-collapse: collapse;
+    max-width: 980px;
+    border: 0.5vmax solid rgba(255, 255, 255, 0.9);
 }
 
 .nav1 {
     float: left;
     width: 25%;
-    height: 100%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    padding: 10px;
+    padding: 1vmax;
     color: black;
 }
 
 .nav2 {
-    height: 100%;
     float: left;
     width: 25%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    padding: 10px;
+    padding: 1vmax;
     color: black;
 }
 
