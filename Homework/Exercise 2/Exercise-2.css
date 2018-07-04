@@ -1,0 +1,21 @@
+body{
+    width: 66%;
+
+}
+body, html{
+    margin:auto;
+}
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr, td, th {
+    width: 20%
+}
+
+img {
+    height: 50%;
+    width: 100%
+}

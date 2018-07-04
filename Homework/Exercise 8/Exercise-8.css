@@ -21,7 +21,7 @@ p {
     color: white;
 }
 
-.circlered {
+.circle-red {
     height: 60%;
     width: 60%;
     background-color: rgba(255, 0, 0, 0.5);
@@ -34,7 +34,7 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.circlegreen {
+.circle-green {
     height: 60%;
     width: 60%;
     background-color: rgba(0, 255, 0, 0.5);
@@ -47,7 +47,7 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.circleblue {
+.circle-blue {
     height: 60%;
     width: 60%;
     background-color: rgba(0, 0, 255, 0.5);
@@ -60,7 +60,7 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.squaregrey {
+.square-grey {
     background-color: lightgrey;
     height: 50vmax;
     width: 50vmax;
