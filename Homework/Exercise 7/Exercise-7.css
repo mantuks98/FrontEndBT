@@ -1,47 +1,49 @@
 
-*
-{
+* {
     box-sizing: border-box;
 }
-html, body, section
-{
+
+html, body {
     height: 100%;
-    text-align: right;
-}
-.container
-{
-    height: 100%;
-    background-color: lightblue;
-    font-size: 40px;
+    margin: auto;
+    position: absolute;
 }
 
-.block
-{
-    background-color:blue;
-    height: 40%;
-    width: 25%;
-    font-size: 40px;
+.container {
+    width: 100vmax;
+    height: 62.5vmax;
+    background-color: lightblue;
 }
-.block2
-{
-    background-color:red;
-    height: 100%;
-    width: 35%;
-    font-size: 40px;
-    float:left;
+
+.block {
+    width: 25vmax;
+    height: 25vmax;
+    background-color: blue;
 }
-.rectangle
-{
-    height: 40%;
-    width: 60%;
+
+.container > .block {
+    background-color: blue;
+    border: none !important;
+}
+
+.rectangle > .block {
+    background-color: red;
+}
+
+.block:nth-of-type(2n+0) {
+    border: 2px solid black;
+}
+
+.rectangle:nth-of-type(2n+0) {
+    background-color: yellow;
+}
+
+.rectangle {
+    width: 60vmax;
+    height: 25vmax;
     background-color: purple;
 }
-.blockstroked
-{
-    border: 5px solid black;
-    border-collapse:collapse;
-    background-color:blue;
-    height: 40%;
-    width: 25%;
-    font-size: 40px;
+
+.block:hover {
+    background-color: black;
 }
