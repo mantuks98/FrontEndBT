@@ -1,0 +1,47 @@
+
+*
+{
+    box-sizing: border-box;
+}
+html, body, section
+{
+    height: 100%;
+    text-align: right;
+}
+.container
+{
+    height: 100%;
+    background-color: lightblue;
+    font-size: 40px;
+}
+
+.block
+{
+    background-color:blue;
+    height: 40%;
+    width: 25%;
+    font-size: 40px;
+}
+.block2
+{
+    background-color:red;
+    height: 100%;
+    width: 35%;
+    font-size: 40px;
+    float:left;
+}
+.rectangle
+{
+    height: 40%;
+    width: 60%;
+    background-color: purple;
+}
+.blockstroked
+{
+    border: 5px solid black;
+    border-collapse:collapse;
+    background-color:blue;
+    height: 40%;
+    width: 25%;
+    font-size: 40px;
+}

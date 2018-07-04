@@ -24,7 +24,7 @@ h2 {
     font-weight: normal;
 }
 
-.h2bold {
+.h2-bold {
     font-size: 35px;
     font-weight: bold;
 }
@@ -48,13 +48,13 @@ body {
     margin: auto;
 }
 
-.imgweddingroom {
+.img-wedding-room {
     object-fit: cover;
     width: 80%;
     height: 70%;
 }
 
-.imgweddingkiss {
+.img-wedding-kiss {
     object-fit: cover;
     width: 70%;
     height: 50%;
@@ -65,14 +65,14 @@ body {
     color: grey;
 }
 
-.historypictext {
+.history-pic-text {
     width: 70%;
     text-align: left;
     margin: auto;
     font-style: italic;
 }
 
-.welcomepic {
+.welcome-pic {
     background-image: url("Wedding-1pic.jpg");
     background-size: cover;
     height: 100%;
@@ -82,7 +82,7 @@ body {
 
 }
 
-.welcomepictext {
+.welcome-pic-text {
     height: 20%;
     text-align: center;
     color: white;
@@ -91,14 +91,14 @@ body {
     top: 40%;
 }
 
-.historypic {
+.history-pic {
     text-align: center;
     color: grey;
     filter: grayscale(70%);
 
 }
 
-.weddingbutton {
+.wedding-button {
     padding: 2vmax 5vmax;
     background-color: black;
     color: white;
@@ -107,19 +107,19 @@ body {
     text-decoration: none;
 }
 
-.weddingbuttondiv {
+.wedding-button-div {
     height: 20vmax;
     position: relative;
 }
 
-.weddingbuttonposition {
+.wedding-button-position {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.rsvpbutton {
+.rsvp-button {
     padding: 3% 10%;
     background-color: #f88179;
     color: white;
@@ -137,7 +137,7 @@ body {
 
 }
 
-.rsvpposition {
+.rsvp-position {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -153,7 +153,7 @@ body {
     letter-spacing: 0.3vmax;
 }
 
-.flowerpic {
+.flower-pic {
     height: 100%;
     width: 100%;
     background-image: url("Flowers_3pic.jpg");
@@ -162,7 +162,7 @@ body {
 
 }
 
-.flowerpicinfo {
+.flower-pic-info {
     height: 50%;
     width: 100%;
     font-size: 3vmax;
@@ -174,13 +174,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.weddingroom {
+.wedding-room {
     color: grey;
     text-align: center;
     filter: grayscale(70%);
 }
 
-.sectionwedding {
+.section-wedding {
     padding-top: 10%;
     padding-bottom: 20%;
     position: relative;
@@ -208,7 +208,7 @@ body {
 
 }
 
-.footerdiv {
+.footer-div {
     background-color: black;
     text-align: center;
     color: white;
@@ -217,11 +217,11 @@ body {
     padding-bottom: 2%;
 }
 
-.footerlink {
+.footer-link {
     color: white;
 }
 
-.footerposition {
+.footer-position {
     padding-top: 1.65vmax;
     padding-bottom: 1.65vmax;
     color: white;
@@ -270,6 +270,6 @@ body {
     background-color: white;
 }
 
-.footerlink:hover {
+.footer-link:hover {
     color: green;
 }
