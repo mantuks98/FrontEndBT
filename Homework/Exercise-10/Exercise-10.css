@@ -2,11 +2,28 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: PSD-Georgia;
+    src: url(Fonts/Georgia.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: PSD-Georgia-Regular;
+    src: url(Fonts/Georgia-Regular.ttf) format('truetype');
+}
+::placeholder{
+    color: lightgrey;
+}
+
 body, html {
     width: 1001px;
     height: 1862px;
     margin: auto;
-    font-family: Georgia;
+    font-family: PSD-Georgia, PSD-Georgia-Regular, serif;
+}
+
+hr {
+    line-height: 1%;
 }
 
 .top-bar {
@@ -238,6 +255,7 @@ header {
     width: 70px;
     height: 32px;
     margin-left: 4px;
+    border-radius: 10px;
 }
 
 .slider {
@@ -428,7 +446,7 @@ header {
     height: 58px;
     width: 280px;
     background-color: aqua;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 81px;
     margin-top: 31px;
     float: left;
@@ -439,7 +457,188 @@ footer {
     width: 100%;
     background-color: black;
     border-top: 5px solid black;
+    position: relative;
 }
+
+.footer-container-one {
+    margin-left: 19px;
+    margin-top: 41px;
+    position: relative;
+    height: 300px;
+    width: 226px;
+}
+
+.footer-about-us {
+    color: white;
+    margin-bottom: 28px;
+}
+
+.footer-about-us-block {
+    height: 90px;
+    width: 215px;
+    background-color: grey;
+    border: 2px solid lightgrey;
+    position: relative;
+}
+
+.footer-about-us-text {
+    text-align: left;
+    color: white;
+    height: 125px;
+    width: 206px;
+}
+
+.footer-about-us-read-more {
+    color: blue;
+    position: absolute;
+    top: 290px;
+    left: 157px;
+    width: 69px;
+    height: 10px;
+}
+
+.footer-container-two {
+    height: 290px;
+    width: 225px;
+    position: absolute;
+    top: 41px;
+    left: 265px;
+}
+
+.footer-quick-links {
+    color: white;
+    margin-bottom: 21px;
+    width: 76px;
+    height: 11px;
+}
+
+.footer-quick-links-links {
+    height: 258px;
+    width: 167px;
+}
+
+.footer-quick-links-span {
+    font-size: 12px;
+    color: blue;
+    width: 225px;
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 3px;
+    line-height: 5px;
+}
+
+.footer-container-three {
+    height: 285px;
+    width: 225px;
+    position: absolute;
+    top: 41px;
+    left: 510px;
+}
+.footer-latest-blog-posts{
+    height:9px;
+    width:123px;
+    color:white;
+    margin-bottom: 23px;
+}
+.footer-latest-blog-spans-1{
+    height:95px;
+    width: 220px;
+    margin-right: 5px;
+}
+.footer-blog-read-more-1{
+    color: blue;
+    margin-top: 16px;
+    margin-left: 156px;
+    height:10px;
+    width: 69px;
+    font-size: 12px;
+    margin-bottom:11px;
+}
+.footer-quick-span-11{
+    font-size: 14px;
+    color: white;
+}
+.footer-quick-span-12{
+    font-size: 10px;
+    color: white;
+}
+.footer-quick-span-13{
+    font-size: 12px;
+    color: white;
+}
+.footer-container-four{
+    height: 307px;
+    width: 227px;
+    position: absolute;
+    top:41px;
+    left: 754px;
+}
+
+.footer-contact-us{
+    font-size: 12px;
+    color: white;
+    margin-bottom: 22px;
+}
+.footer-contact-us-name{
+    height: 32px;
+    width: 226px;
+    margin-bottom: 10px;
+    padding-left: 2px;
+    background-color: grey;
+    color: red;
+    border-radius: 10px;
+
+
+}
+.footer-contact-us-email{
+    height: 32px;
+    width: 226px;
+    margin-bottom: 9px;
+    padding-left: 2px;
+    background-color: grey;
+    color: lightgrey;
+    border-radius: 10px;
+
+
+}
+.footer-contact-us-subject{
+    height: 32px;
+    width: 226px;
+    margin-bottom: 10px;
+    padding-left: 2px;
+    background-color: grey;
+    color: lightgrey;
+    border-radius: 10px;
+
+
+}
+.footer-contact-us-message{
+    height: 111px;
+    width: 226px;
+    margin-bottom: 8px;
+    padding-left: 2px;
+    resize: none;
+    background-color: grey;
+    color: lightgrey;
+    border-radius: 10px;
+
+
+}
+.footer-contact-us-submit{
+    height: 32px;
+    width: 77px;
+    text-decoration: none;
+    background-color:aqua;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 .copy-right {
     height: 62px;
