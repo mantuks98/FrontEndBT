@@ -4,14 +4,15 @@
 
 @font-face {
     font-family: PSD-Georgia;
-    src: url(Fonts/Georgia.ttf) format('truetype');
+    src: url(Georgia.ttf) format('truetype');
 }
 
 @font-face {
     font-family: PSD-Georgia-Regular;
-    src: url(Fonts/Georgia-Regular.ttf) format('truetype');
+    src: url('Fonts/Georgia-Regular.ttf') format('truetype');
 }
-::placeholder{
+
+::placeholder {
     color: lightgrey;
 }
 
@@ -19,7 +20,10 @@ body, html {
     width: 1001px;
     height: 1862px;
     margin: auto;
-    font-family: PSD-Georgia, PSD-Georgia-Regular, serif;
+}
+
+body {
+    font-family: PSD-Georgia, PSD-Georgia-Regular, serif; !important
 }
 
 hr {
@@ -41,10 +45,8 @@ hr {
 
 .top-bar-about {
     padding-left: 20px;
-    height: 13px;
-    width: 260px;
-    color: lightgrey;
     font-size: 12px;
+    color: lightgrey;
     padding-top: 23px;
     padding-bottom: 24px;
 }
@@ -58,7 +60,7 @@ hr {
     display: inline-block;
 }
 
-.top-bar-img-linkdein {
+.top-bar-img-link-de-in {
     height: 33px;
     width: 33px;
     border-radius: 100%;
@@ -226,12 +228,12 @@ header {
 }
 
 .navigation-logo-header {
-    font-size: 38px;
+    font-size: 36px;
     margin-bottom: 8px;
 }
 
 .navigation-logo-paragraph {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .navigation-search-form {
@@ -246,6 +248,9 @@ header {
     height: 32px;
     width: 215px;
     float: left;
+    border-radius: 10px;
+    border: none;
+    background-color: grey;
 }
 
 .navigation-search-button {
@@ -256,6 +261,7 @@ header {
     height: 32px;
     margin-left: 4px;
     border-radius: 10px;
+    border: none;
 }
 
 .slider {
@@ -309,6 +315,7 @@ header {
     transform: translate(-50%, -50%);
     font-size: 22px;
     font-weight: bold;
+    color: white;
 }
 
 .slider-controls {
@@ -348,8 +355,117 @@ header {
     width: 456px;
     float: left;
     margin-left: 19px;
-    background-color: red;
+    position: relative;
     margin-right: 39px;
+}
+
+.intro-left-monitor {
+    height: 249px;
+    width: 312px;
+    position: relative;
+}
+
+.intro-left-monitor-rectangle {
+    height: 188px;
+    width: 312px;
+    background-color: grey;
+    border: 13px solid black;
+    border-radius: 10px;
+}
+
+.intro-left-path-img {
+    height: 29px;
+    width: 312px;
+    position: absolute;
+    top: 181px;
+}
+
+.intro-left-base-img {
+    height: 35px;
+    width: 98px;
+    position: absolute;
+    top: 209px;
+    left: 109px;
+}
+
+.arrow1 {
+    position: absolute;
+    top: 41px;
+    right: 36px;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 342px;
+    right: 48px;
+    transform: rotate(90deg);
+}
+
+.arrow3 {
+    position: absolute;
+    top: 229px;
+    right: 388px;
+    transform: rotate(180deg);
+}
+
+.intro-i-pad {
+    height: 159px;
+    width: 121px;
+    background-color: grey;
+    border-left: 11px solid black;
+    border-right: 11px solid black;
+    border-top: 15px solid black;
+    border-bottom: 16px solid black;
+    border-radius: 10px;
+    position: absolute;
+    top: 158px;
+    right: 2px;
+}
+
+.intro-i-pad-button {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background-color: white;
+    border: 4px solid black;
+    position: absolute;
+    top: 303px;
+    right: 54px;
+}
+
+.intro-phone-case {
+    height: 110px;
+    width: 58px;
+    border-radius: 10px;
+    background-color: black;
+}
+.intro-phone-screen{
+    position: relative;
+    height:77px;
+    width:54px;
+    background-color: grey;
+    border-radius: 2px;
+}
+.case-position{
+    position: absolute;
+    bottom: 4px;
+    left: 88px;
+}
+.screen-position{
+    position: absolute;
+    bottom: 17px;
+    left: 2px;
+}
+.button-position{
+    position: absolute;
+    top: 95px;
+    left: 24px;
+}
+.phone-on-side{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 164px;
+    bottom: 150px;
 }
 
 .intro-right {
@@ -358,7 +474,6 @@ header {
     float: left;
     margin-right: 27px;
     margin-top: 2px;
-    background-color: green;
 }
 
 .intro-right-box {
@@ -380,28 +495,22 @@ header {
     height: 81px;
     width: 86px;
     background-color: grey;
-    position: absolute;
-    left: 66px;
+    margin-left: 66px;
+    margin-bottom: 11px;
     font-size: 16px;
+    position: relative;
+    color: white;
 }
 
 .intro-right-theme {
     color: blue;
-    height: 15px;
-    width: 150px;
-    position: absolute;
-    top: 92px;
-    left: 34px;
     font-size: 16px;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .intro-right-text {
     color: grey;
-    height: 76px;
-    width: 214px;
-    position: absolute;
-    top: 123px;
     font-size: 13px;
     text-align: center;
 }
@@ -443,13 +552,17 @@ header {
 
 .shout-button {
     position: relative;
-    height: 58px;
-    width: 280px;
+    padding-bottom: 19px;
+    padding-top: 19px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color:white;
     background-color: aqua;
     border-radius: 10px;
     margin-left: 81px;
     margin-top: 31px;
     float: left;
+    font-size: 26px;
 }
 
 footer {
@@ -470,7 +583,9 @@ footer {
 
 .footer-about-us {
     color: white;
+    font-size: 12px;
     margin-bottom: 28px;
+
 }
 
 .footer-about-us-block {
@@ -478,7 +593,10 @@ footer {
     width: 215px;
     background-color: grey;
     border: 2px solid lightgrey;
+    margin-bottom: 20px;
     position: relative;
+    font-size: 18px;
+
 }
 
 .footer-about-us-text {
@@ -486,6 +604,8 @@ footer {
     color: white;
     height: 125px;
     width: 206px;
+    font-size: 12px;
+
 }
 
 .footer-about-us-read-more {
@@ -495,6 +615,8 @@ footer {
     left: 157px;
     width: 69px;
     height: 10px;
+    font-size: 12px;
+
 }
 
 .footer-container-two {
@@ -508,8 +630,8 @@ footer {
 .footer-quick-links {
     color: white;
     margin-bottom: 21px;
-    width: 76px;
-    height: 11px;
+    font-size: 12px;
+
 }
 
 .footer-quick-links-links {
@@ -520,9 +642,8 @@ footer {
 .footer-quick-links-span {
     font-size: 12px;
     color: blue;
-    width: 225px;
-    border-bottom: 2px solid lightgrey;
-    padding-bottom: 3px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px;
     line-height: 5px;
 }
 
@@ -533,52 +654,62 @@ footer {
     top: 41px;
     left: 510px;
 }
-.footer-latest-blog-posts{
-    height:9px;
-    width:123px;
-    color:white;
+
+.footer-latest-blog-posts {
+    height: 9px;
+    width: 123px;
+    color: white;
     margin-bottom: 23px;
+    font-size: 12px;
+
 }
-.footer-latest-blog-spans-1{
-    height:95px;
-    width: 220px;
+
+.footer-latest-blog-spans-1 {
     margin-right: 5px;
 }
-.footer-blog-read-more-1{
+
+.footer-blog-read-more-1 {
     color: blue;
     margin-top: 16px;
     margin-left: 156px;
-    height:10px;
+    height: 10px;
     width: 69px;
     font-size: 12px;
-    margin-bottom:11px;
+    margin-bottom: 11px;
 }
-.footer-quick-span-11{
+
+.footer-quick-span-11 {
     font-size: 14px;
     color: white;
+    font-weight: bold;
 }
-.footer-quick-span-12{
+
+.footer-quick-span-12 {
     font-size: 10px;
     color: white;
 }
-.footer-quick-span-13{
+
+.footer-quick-span-13 {
     font-size: 12px;
     color: white;
 }
-.footer-container-four{
+
+.footer-container-four {
     height: 307px;
     width: 227px;
     position: absolute;
-    top:41px;
+    top: 41px;
     left: 754px;
 }
 
-.footer-contact-us{
+.footer-contact-us {
     font-size: 12px;
     color: white;
     margin-bottom: 22px;
+
 }
-.footer-contact-us-name{
+
+.footer-contact-us-name {
     height: 32px;
     width: 226px;
     margin-bottom: 10px;
@@ -586,10 +717,12 @@ footer {
     background-color: grey;
     color: red;
     border-radius: 10px;
-
+    font-size: 13px;
+    border: none;
 
 }
-.footer-contact-us-email{
+
+.footer-contact-us-email {
     height: 32px;
     width: 226px;
     margin-bottom: 9px;
@@ -597,10 +730,12 @@ footer {
     background-color: grey;
     color: lightgrey;
     border-radius: 10px;
-
+    font-size: 13px;
+    border: none;
 
 }
-.footer-contact-us-subject{
+
+.footer-contact-us-subject {
     height: 32px;
     width: 226px;
     margin-bottom: 10px;
@@ -608,10 +743,12 @@ footer {
     background-color: grey;
     color: lightgrey;
     border-radius: 10px;
-
+    font-size: 13px;
+    border: none;
 
 }
-.footer-contact-us-message{
+
+.footer-contact-us-message {
     height: 111px;
     width: 226px;
     margin-bottom: 8px;
@@ -620,25 +757,22 @@ footer {
     background-color: grey;
     color: lightgrey;
     border-radius: 10px;
-
+    font-size: 13px;
+    border: none;
 
 }
-.footer-contact-us-submit{
+
+.footer-contact-us-submit {
     height: 32px;
     width: 77px;
     text-decoration: none;
-    background-color:aqua;
+    background-color: aqua;
     border-radius: 10px;
+    font-size: 13px;
+    border: none;
+    color:white;
+    font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
 
 .copy-right {
     height: 62px;
@@ -663,6 +797,10 @@ footer {
     right: 20px;
     font-size: 12px;
     color: lightgray;
+}
+
+.links {
+    text-decoration: none;
 }
 
 .hover:hover {
