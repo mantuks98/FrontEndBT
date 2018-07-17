@@ -18,6 +18,10 @@
 h1 {
     font-size: 36px;
 }
+h3 {
+    font-size: 36px;
+    font-weight: normal;
+}
 
 body, html {
     height: 100%;
@@ -173,38 +177,90 @@ header {
 #padding-top {
     padding-top: 20%;
 }
-#about{
+
+#about {
     background-color: lightcoral;
     text-align: center;
 }
-#about-container{
+
+#about-container {
     width: 96%;
     margin: auto;
-}
-.about-texts{
-    text-align: left;
-    font-size: 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
-#chef-img{
+.about-texts {
+    text-align: left;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.position-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#chef-img {
     width: 150px;
     border-radius: 50%;
     float: right;
 }
-.bold{
+
+.bold {
     font-weight: bold;
 }
-.half-width{
+
+.half-width {
     width: 50%;
 }
-.float-left{
+
+.float-left {
     float: left;
 }
-.float-right{
+
+.float-right {
     float: right;
 }
-#restourant-img{
+
+.overflow {
+    overflow: hidden;
+}
+
+#restourant-img {
     width: 100%;
+}
+
+#contacts{
+    background-color: lightblue;
+}
+
+.greyscale{
+    filter: grayscale(100%);
+}
+.input-class{
+    width: 100%;
+    border: none;
+    padding-top:16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    font-size: 24px;
+    font-family: "Amatic SC", cursive;
+}
+
+footer {
+    background-color: black;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    font-size: 36px;
+    text-align: center;
+
+}
+
+a {
+    color: white;
 }
 
 nav:hover {
@@ -223,9 +279,11 @@ nav:hover {
 .button:visited {
     color: white;
 }
-.menu-buttons:hover{
+
+.menu-buttons:hover {
     background-color: red;
 }
+
 #header-button:hover {
     background-color: lightgrey;
     color: black;
