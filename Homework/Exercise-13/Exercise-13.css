@@ -81,11 +81,9 @@ header {
 
 #header-button {
     font-size: 36px;
-!important;
     background-color: black;
     text-decoration: none;
     color: white;
-    margin-left: auto;
 }
 
 #header-info {
@@ -103,7 +101,6 @@ header {
 
 #black-bg {
     background-color: black;
-!important;
     width: 100%;
     padding-bottom: 64px;
     padding-top: 64px;
@@ -113,7 +110,7 @@ header {
     background-color: white;
 }
 
-#the-menu {
+.block-header {
     font-size: 64px;
     text-align: center;
     margin-bottom: 64px;
@@ -138,13 +135,11 @@ header {
 .menu-name {
     color: black;
     text-align: left;
-!important;
 }
 
 .menu-ingredients {
     color: grey;
     text-align: left;
-!important;
     font-size: 36px;
 }
 
@@ -178,6 +173,39 @@ header {
 #padding-top {
     padding-top: 20%;
 }
+#about{
+    background-color: lightcoral;
+    text-align: center;
+}
+#about-container{
+    width: 96%;
+    margin: auto;
+}
+.about-texts{
+    text-align: left;
+    font-size: 24px;
+}
+
+#chef-img{
+    width: 150px;
+    border-radius: 50%;
+    float: right;
+}
+.bold{
+    font-weight: bold;
+}
+.half-width{
+    width: 50%;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+#restourant-img{
+    width: 100%;
+}
 
 nav:hover {
     opacity: 1;
@@ -185,7 +213,7 @@ nav:hover {
 
 .button:hover {
     background-color: lightgrey;
-    z-index: 2;
+    color: black;
 }
 
 .button:link {
@@ -195,7 +223,10 @@ nav:hover {
 .button:visited {
     color: white;
 }
-
+.menu-buttons:hover{
+    background-color: red;
+}
 #header-button:hover {
-
+    background-color: lightgrey;
+    color: black;
 }
