@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vidtemp"></div>
+<div id="c"></div>
+<div id="did"></div>
+<div id="min"></div>
+
+
+
+<script>
+    let masyvas = [18, 16, 20, 21, 20, 18, 20, 24, 25, 21];
+    let c=masyvas.length;
+    let vidtemp=0;
+    let min=masyvas[0];
+    let did=masyvas[0];
+    let did1;
+    let min1;
+    masyvas.forEach(function(temp){
+        vidtemp=vidtemp+temp;
+        if (did<temp){
+            did1=did;
+            did=temp;
+        }
+        if (min>temp){
+            min1=min;
+            min=temp;
+        }
+    });
+    vidtemp=vidtemp/c;
+    document.getElementById("vidtemp").innerHTML=vidtemp;
+    document.getElementById("c").innerHTML=c;
+    document.getElementById("did").innerHTML=did +" "+ did1;
+    document.getElementById("min").innerHTML=min +" "+ min1;
+</script>
+
+</body>
+</html>

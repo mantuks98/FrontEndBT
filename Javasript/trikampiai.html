@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+
+<script>
+    let masyvas=[8, 8, 6];
+    let a=masyvas[0];
+    let b=masyvas[0];
+    let c;
+    masyvas.forEach(function(krast){
+        if (a>krast){
+            a=krast;
+        }
+        else if (b<krast){
+            b=krast;
+        }
+    });
+    let a1=masyvas.indexOf(a);
+    masyvas.splice(a1, 1);
+    let b1=masyvas.indexOf(b);
+    masyvas.splice(b1, 1);
+    c=masyvas[0];
+    let a2=a*a;
+    let b2=b*b;
+    let c2=c*c;
+    let s;
+    let h2;
+    let h;
+    if(a+c<b){
+        window.alert("Trikampis neegzistuoja");
+    }
+    if(a!==b && a!==c && c!==b){
+
+        window.alert("Trikampis įvairiakraštis");
+    }
+    if(a===c && a===b && b===c){
+        s=(a2*Math.sqrt(3))/4;
+        window.alert("Trikampis lygiakraštis, jo plotas: ~"+Math.round(s));
+    }
+    if((a===b && a!==c) || (a===c && a!==b) || (b===c && b!==a) || (b===a && b!==c) || (c===a && c!==b) || (c===b && c!==a)){
+        if(a===c){
+            let pgr=b/2;
+            h2=a2-pgr*pgr;
+            h=Math.sqrt(h2);
+            s=h*pgr;
+        }
+        if(a===b){
+            let pgr=c/2;
+            h2=a2-pgr*pgr;
+            h=Math.sqrt(h2);
+            s=h*pgr;
+        }
+        if(b===c){
+            let pgr=a/2;
+            h2=a2-pgr*pgr;
+            h=Math.sqrt(h2);
+            s=h*pgr;
+        }
+        window.alert("Trikampis lygiašonis, jo plotas: ~"+Math.round(s));
+    }
+    if(a2+c2===b2){
+        s=(a*c)/2;
+        window.alert("Trikampis status, jo plotas: ~"+Math.round(s));
+    }
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
