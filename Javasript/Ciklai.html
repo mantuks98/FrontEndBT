@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temp = [36.7, 41.2, 36.6, 41.1, 41, 39.1, 39.2, 40.5];
+    let laikas = [12, 13, 14, 15, 16, 17, 18, 19];
+    let did= temp[0];
+    let a=0;
+    let b;
+    let c=[];
+    let g=[];
+    let did1=[];
+    let gera=[];
+    temp.forEach(function(temper){
+        if (did<temper){
+            did=temper;
+            b=a;
+        }
+        a++;
+    });
+    a=12;
+    temp.forEach(function(temper){
+        if(did-temper<=0.5){
+            did1.push(temper);
+            c.push(a);
+        }
+        a++;
+    });
+    a=12;
+    temp.forEach(function(temper){
+        if(temper<=37.00 && temper>=36.40){
+            gera.push(temper);
+            g.push(a);
+        }
+        a++;
+    });
+    window.alert("Auksciausia temperatura: " + did +" "+ laikas[b] + " valandą");
+    window.alert("Auksciausia tempetarura dar buvo: " + did1.join(" - ") +" "+ c.join(" - ") + " valandą");
+    window.alert("Gera tempetarura buvo: " + gera.join(" - ") +" "+ g.join(" - ") + " valandą");
+</script>
+</body>
+</html>
