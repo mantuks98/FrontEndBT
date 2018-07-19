@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+    let auto = [
+        ['2017-07-06 19:59:45','ABC123',5000,200],
+        ['2017-07-06 19:59:45','ABC456',1564,50],
+        ['2017-07-06 19:59:45','ABC789',8432,123],
+        null,
+        ['2017-07-06 19:59:45','ABC159',4568,589],
+        ['2017-07-06 19:59:45','ABC753',9852,150],
+        ['2017-07-06 19:59:45','ABC147',1234,120],
+        undefined,
+        ['2017-07-06 19:59:45','ABC258',7894,130],
+        ['2017-07-06 19:59:45','ABC369',3578,140],
+        ['2017-07-06 19:59:45','ABC854',1598,150]
+    ];
+    let autofix=[];
+    auto.forEach(function(lol) {
+        if(typeof lol !== "undefined" && lol !==null){
+            autofix.push(lol);
+        }
+    });
+    let a=0;
+    autofix.forEach(function(loll){
+        b=loll;
+        window.alert(b[0] +" "+ b[1] + " "+ Math.round(b[2]/b[3]*3.6)+ " km/h "+ Math.round(b[2]/1000) + " km" + " " + b[3]/3600 +" h");
+    });
+</script>
+
+
+
+</body>
+</html>
