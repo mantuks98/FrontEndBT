@@ -38,16 +38,28 @@ a=0;
  });
 
 function addTable(){
-    let Data=[];
+    let h=0;
     let date=document.getElementById("Date").value;
+    if(date===""){
+        h++;
+    }
     date=date.replace("T", " / ");
-    Data.push(date);
     let number=document.getElementById("Number").value;
-    Data.push(number);
+    if(number===""){
+        h++;
+    }
     let distance=document.getElementById("Distance").value;
-    Data.push(distance);
+    if(distance===""){
+        h++;
+    }
     let time=document.getElementById("Time").value;
-    Data.push(time);
+    if(time===""){
+        h++;
+    }
+    if(h>0){
+        window.alert("Patikrinkite ar užpildėt visus laukelius!");
+        return false;
+    }
     let table = document.getElementById("newTable");
     let row = table.insertRow();
     let newDate = row.insertCell();
@@ -55,9 +67,11 @@ function addTable(){
     let newDistance = row.insertCell();
     let newTime = row.insertCell();
     let newSpeed = row.insertCell();
-        newDate.innerHTML = Data[0];
-        newNumber.innerHTML = Data[1];
-        newDistance.innerHTML =(Data[2]/1000).toFixed(2);
-        newTime.innerHTML = (Data[3]/3600).toFixed(2);
-        newSpeed.innerHTML =(Data[2] / Data[3] * 3.6).toFixed(0);
+        newDate.innerHTML = date;
+        newNumber.innerHTML = number;
+        newDistance.innerHTML =(distance/1000).toFixed(2);
+        newTime.innerHTML = (time/3600).toFixed(2);
+        newSpeed.innerHTML =(distance / time * 3.6).toFixed(0);
+
 }
+
