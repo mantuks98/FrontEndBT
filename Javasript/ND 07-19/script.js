@@ -35,11 +35,12 @@ a=0;
          row += '</tr>';
          document.getElementById("duomenys").innerHTML += row;
      }
-
  });
+
 function addTable(){
     let Data=[];
     let date=document.getElementById("Date").value;
+    date=date.replace("T", " / ");
     Data.push(date);
     let number=document.getElementById("Number").value;
     Data.push(number);
@@ -60,12 +61,3 @@ function addTable(){
         newTime.innerHTML = (Data[3]/3600).toFixed(2);
         newSpeed.innerHTML =(Data[2] / Data[3] * 3.6).toFixed(0);
 }
-
-
-
-
-
-
-
-
-
