@@ -1,4 +1,5 @@
- let auto = [
+
+let auto = [
      ['2017-07-06 19:59:45','ABC123',5000,200],
      ['2017-07-06 19:59:45','ABC456',1564,50],
      ['2017-07-06 19:59:45','ABC789',8432,123],
@@ -11,8 +12,8 @@
      ['2017-07-06 19:59:45','ABC369',3578,140],
      ['2017-07-06 19:59:45','ABC854',1598,150]
  ];
+
 a=0;
-b=0;
  auto.forEach(function(lol) {
      if(typeof lol !== "undefined" && lol !==null){
          c=lol;
@@ -20,11 +21,9 @@ b=0;
          lol.forEach(function(item) {
              if(a===2){
                  row += '<td>' + (item/1000).toFixed(2) +'</td>';
-                 b++;
              }
              else if (a===3){
                  row += '<td>' + (item/3600).toFixed(2) +'</td>';
-                 b++;
              }
              else {
                  row += '<td>' + item + '</td>';
@@ -32,31 +31,41 @@ b=0;
              a++;
          });
          a=0;
-         b=0;
          row += '<td>' + (c[2] / c[3] * 3.6).toFixed(0)+ '</td>';
          row += '</tr>';
          document.getElementById("duomenys").innerHTML += row;
      }
 
  });
+function addTable(){
+    let Data=[];
+    let date=document.getElementById("Date").value;
+    Data.push(date);
+    let number=document.getElementById("Number").value;
+    Data.push(number);
+    let distance=document.getElementById("Distance").value;
+    Data.push(distance);
+    let time=document.getElementById("Time").value;
+    Data.push(time);
+    let table = document.getElementById("newTable");
+    let row = table.insertRow();
+    let newDate = row.insertCell();
+    let newNumber = row.insertCell();
+    let newDistance = row.insertCell();
+    let newTime = row.insertCell();
+    let newSpeed = row.insertCell();
+        newDate.innerHTML = Data[0];
+        newNumber.innerHTML = Data[1];
+        newDistance.innerHTML =(Data[2]/1000).toFixed(2);
+        newTime.innerHTML = (Data[3]/3600).toFixed(2);
+        newSpeed.innerHTML =(Data[2] / Data[3] * 3.6).toFixed(0);
+}
 
 
 
- function CreateTable() {
-     let table = document.getElementById("newTable");
-     let row = table.insertRow();
-     let date = row.insertCell();
-     let number = row.insertCell();
-     let distance = row.insertCell();
-     let time = row.insertCell();
-     let speed = row.insertCell();
-     autofix.forEach(function (loll) {
-         b = loll;
-         date.innerHTML = " ";
-         number.innerHTML = " ";
-         distance.innerHTML =" ";
-         time.innerHTML = " ";
-         speed.innerHTML = " ";
 
-     });
- }
+
+
+
+
+

@@ -9,17 +9,18 @@
 <body>
 
 <div>
-    <input type="datetime-local">
-    <input type="text" maxlength="6" placeholder="Valstybiniai numeriai">
-    <input type="number" step="50" placeholder="Atstumas metrais">
-    <input type="number" step="10" placeholder="Laikas sekundėm">
-    <input type="submit" value="Pateikti">
+    <input type="date" id="Date">
+    <input type="text" maxlength="6" placeholder="Valstybiniai numeriai" id="Number">
+    <input type="number" step="50" placeholder="Atstumas metrais" id="Distance">
+    <input type="number" step="10" placeholder="Laikas sekundėm" id="Time">
+    <input type="submit" value="Pateikti" onclick="addTable()">
     <br>
     <br>
     <br>
     <br>
     <br>
-    <table id="duomenys">
+    <table id="newTable">
+        <tbody id="duomenys">
         <tr>
             <th>Data / Laikas</th>
             <th>Numeriai</th>
@@ -27,19 +28,15 @@
             <th>Laikas (h)</th>
             <th>Greitis (km/h)</th>
         </tr>
+        </tbody>
     </table>
     <br>
-    <br>
-    <br>
-    <br>
-    <table id="newTable">
 
-    </table>
+    <br>
+    <br>
+    <br>
 
 </div>
-<button onclick="CreateTable()">Lol</button>
-
-
 <script src="script.js"></script>
 </body>
 </html>
