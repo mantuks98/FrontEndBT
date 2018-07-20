@@ -14,10 +14,12 @@ let auto = [
  ];
 
 a=0;
+let l=1;
  auto.forEach(function(lol) {
      if(typeof lol !== "undefined" && lol !==null){
          c=lol;
          let row = '<tr>';
+         row += '<td>' + l + '</td>';
          lol.forEach(function(item) {
              if(a===2){
                  row += '<td>' + (item/1000).toFixed(2) +'</td>';
@@ -32,7 +34,9 @@ a=0;
          });
          a=0;
          row += '<td>' + (c[2] / c[3] * 3.6).toFixed(0)+ '</td>';
+         row += '<td>' + "<button>Delete</button>" + '</td>';
          row += '</tr>';
+         l++;
          document.getElementById("duomenys").innerHTML += row;
      }
  });
@@ -62,16 +66,25 @@ function addTable(){
     }
     let table = document.getElementById("newTable");
     let row = table.insertRow();
+    let nr = row.insertCell();
     let newDate = row.insertCell();
     let newNumber = row.insertCell();
     let newDistance = row.insertCell();
     let newTime = row.insertCell();
     let newSpeed = row.insertCell();
+        nr.innerHTML = l;
+        l++;
         newDate.innerHTML = date;
         newNumber.innerHTML = number;
         newDistance.innerHTML =(distance/1000).toFixed(2);
         newTime.innerHTML = (time/3600).toFixed(2);
         newSpeed.innerHTML =(distance / time * 3.6).toFixed(0);
-
+        return l;
 }
 
+
+/*
+function deleteRow(){
+    duomenys.deleteRow(this);
+}
+*/
