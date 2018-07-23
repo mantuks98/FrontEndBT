@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="1.css">
+
+</head>
+<body>
+
+<div>
+    <form id="Form">
+        <input type="datetime-local" name="Date" id="Date" placeholder="Data / Laikas">
+        <input type="text" name="Number" maxlength="6" placeholder="Valstybiniai numeriai" id="Number">
+        <input type="number" name="Distance" placeholder="Atstumas metrais" id="Distance">
+        <input type="number" name="Time" placeholder="Laikas sekundėm" id="Time">
+        <input type="button" name="Submit" value="Pateikti" onclick="addTable(); clearInput()">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Data / Laikas</th>
+                <th>Numeriai</th>
+                <th>Atstumas (km)</th>
+                <th>Laikas (h)</th>
+                <th>Greitis (km/h)</th>
+            </tr>
+        </thead>
+        <tbody id="newTable">
+
+        </tbody>
+    </table>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

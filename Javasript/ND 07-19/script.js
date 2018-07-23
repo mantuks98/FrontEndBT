@@ -13,78 +13,100 @@ let auto = [
      ['2017-07-06 19:59:45','ABC854',1598,150]
  ];
 
-a=0;
+let a;
 let l=1;
  auto.forEach(function(lol) {
      if(typeof lol !== "undefined" && lol !==null){
-         c=lol;
-         let row = '<tr>';
-         row += '<td>' + l + '</td>';
-         lol.forEach(function(item) {
-             if(a===2){
-                 row += '<td>' + (item/1000).toFixed(2) +'</td>';
-             }
-             else if (a===3){
-                 row += '<td>' + (item/3600).toFixed(2) +'</td>';
-             }
-             else {
-                 row += '<td>' + item + '</td>';
-             }
-             a++;
-         });
-         a=0;
-         row += '<td>' + (c[2] / c[3] * 3.6).toFixed(0)+ '</td>';
-         row += '<td>' + "<button>Delete</button>" + '</td>';
-         row += '</tr>';
-         l++;
-         document.getElementById("duomenys").innerHTML += row;
+             let table = document.getElementById("duomenys");
+             let row = table.insertRow();
+             let Nr = row.insertCell();
+             let Date = row.insertCell();
+             let Number = row.insertCell();
+             let Distance = row.insertCell();
+             let Time = row.insertCell();
+             let Speed = row.insertCell();
+             let NDelete = row.insertCell();
+             Nr.innerHTML = l;
+             Date.innerHTML = lol[0];
+             Number.innerHTML = lol[1];
+             Distance.innerHTML = (lol[2] / 1000).toFixed(2);
+             Time.innerHTML = (lol[3] / 3600).toFixed(2);
+             Speed.innerHTML = (lol[2] / lol[3] * 3.6).toFixed(0);
+             let button = document.createElement('input');
+             button.setAttribute('type', 'button');
+             button.setAttribute('value','Delete');
+             button.setAttribute('onclick', 'removeRow(this)');
+             NDelete.appendChild(button);
+             row.appendChild(NDelete);
+             table.appendChild(row);
+             l++;
      }
  });
-
-function addTable(){
-    let h=0;
-    let date=document.getElementById("Date").value;
-    if(date===""){
+ let o=l-1;
+function addTable() {
+    let h = 0;
+    let date = document.getElementById("Date").value;
+    if (date === "") {
         h++;
     }
-    date=date.replace("T", " / ");
-    let number=document.getElementById("Number").value;
-    if(number===""){
+    date = date.replace("T", " / ");
+    let number = document.getElementById("Number").value;
+    if (number === "") {
         h++;
     }
-    let distance=document.getElementById("Distance").value;
-    if(distance===""){
+    let distance = document.getElementById("Distance").value;
+    if (distance === "") {
         h++;
     }
-    let time=document.getElementById("Time").value;
-    if(time===""){
+    let time = document.getElementById("Time").value;
+    if (time === "") {
         h++;
     }
-    if(h>0){
+    if (h > 0) {
         window.alert("Patikrinkite ar užpildėt visus laukelius!");
         return false;
     }
-    let table = document.getElementById("newTable");
-    let row = table.insertRow();
-    let nr = row.insertCell();
-    let newDate = row.insertCell();
-    let newNumber = row.insertCell();
-    let newDistance = row.insertCell();
-    let newTime = row.insertCell();
-    let newSpeed = row.insertCell();
-        nr.innerHTML = l;
-        l++;
+    let newauto=[];
+    newauto.push(date);
+    newauto.push(number);
+    newauto.push(distance);
+    newauto.push(time);
+    auto.push(newauto);
+        let table = document.getElementById("newTable");
+        let row = table.insertRow();
+        o++;
+        let nr = row.insertCell();
+        let newDate = row.insertCell();
+        let newNumber = row.insertCell();
+        let newDistance = row.insertCell();
+        let newTime = row.insertCell();
+        let newSpeed = row.insertCell();
+        let newDelete = row.insertCell();
+        nr.innerHTML = o;
         newDate.innerHTML = date;
         newNumber.innerHTML = number;
-        newDistance.innerHTML =(distance/1000).toFixed(2);
-        newTime.innerHTML = (time/3600).toFixed(2);
-        newSpeed.innerHTML =(distance / time * 3.6).toFixed(0);
-        return l;
+        newDistance.innerHTML = (distance / 1000).toFixed(2);
+        newTime.innerHTML = (time / 3600).toFixed(2);
+        newSpeed.innerHTML = (distance / time * 3.6).toFixed(0);
+        let button = document.createElement('input');
+        button.setAttribute('type', 'button');
+        button.setAttribute('value','Delete');
+        button.setAttribute('onclick', 'removeRow1(this)');
+        newDelete.appendChild(button);
+        row.appendChild(newDelete);
+        table.appendChild(row);
+        l++;
 }
 
-
-/*
-function deleteRow(){
-    duomenys.deleteRow(this);
+function clearInput(){
+    document.getElementById("Form").reset();
 }
-*/
+
+function removeRow(oButton){
+    let table = document.getElementById("duomenys");
+    table.deleteRow(oButton.parentNode.parentNode.rowIndex);
+}
+function removeRow1(oButton){
+    let table = document.getElementById("newTable");
+    table.deleteRow(oButton.parentNode.parentNode.rowIndex);
+}

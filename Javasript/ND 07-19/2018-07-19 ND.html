@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <title>Title</title>
 </head>
 <body>
 
 <div>
-        <input type="datetime-local" name="Date" id="Date" placeholder="Data / Laikas">
-        <input type="text" name="Number" maxlength="6" placeholder="Valstybiniai numeriai" id="Number">
-        <input type="number" name="Distance" placeholder="Atstumas metrais" id="Distance">
-        <input type="number" name="Time" placeholder="Laikas sekundėm" id="Time">
-        <input type="submit" name="Submit" value="Pateikti" onclick="addTable()">
+    <form id="Form">
+    <input type="datetime-local" name="Date" id="Date" placeholder="Data / Laikas">
+    <input type="text" name="Number" maxlength="6" placeholder="Valstybiniai numeriai" id="Number">
+    <input type="number" name="Distance" placeholder="Atstumas metrais" id="Distance">
+    <input type="number" name="Time" placeholder="Laikas sekundėm" id="Time">
+    <input type="button" name="Submit" value="Pateikti" onclick="addTable(); clearInput()">
+</form>
     <br>
     <br>
     <br>
