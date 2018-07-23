@@ -6,6 +6,11 @@
     nav {
         display: none;
     }
+    div.header-text{
+        font-size: 60px;
+        font-weight: bold;
+    }
+
 }
 
 @media screen and (max-width: 940px) {
@@ -14,6 +19,12 @@
         height: auto;
     }
 }
+
+.max-width{
+    max-width: 980px;
+    margin:auto;
+}
+
 
 h1 {
     font-size: 36px;
@@ -76,11 +87,11 @@ header {
     transform: translate(-50%, -50%);
 }
 
-#header-text {
-    font-size: 60px;
-    font-weight: bold;
+.header-text {
+    font-size: 100px;
     text-align: center;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 
 #header-button {
@@ -118,6 +129,7 @@ header {
     font-size: 64px;
     text-align: center;
     margin-bottom: 64px;
+    margin-top: 64px;
 }
 
 .menu-buttons {
@@ -125,8 +137,10 @@ header {
     font-size: 36px;
     background-color: black;
     padding: 12px 24px;
+    color:white;
     float: left;
     text-align: center;
+    font-family: "Amatic SC", cursive;
     width: 33.33333333%;
 }
 
@@ -174,7 +188,7 @@ header {
     color: black;
 }
 
-#padding-top {
+.padding-top {
     padding-top: 20%;
 }
 
@@ -233,8 +247,34 @@ header {
     width: 100%;
 }
 
+#contacts-submit{
+    width:100%;
+    border: none;
+    text-decoration: none;
+    padding-top:16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    font-size: 24px;
+    font-family: "Amatic SC", cursive;
+    margin-bottom: 64px;
+}
+
 #contacts{
     background-color: lightblue;
+}
+
+#fyi{
+    color: white;
+    background-color: black;
+    padding: 0 7px;
+    margin-right: 5px;
+    text-align: center;
+    float: left;
+}
+
+.width-90{
+    width: 96%;
+    margin: auto;
 }
 
 .greyscale{
@@ -282,6 +322,7 @@ nav:hover {
 
 .menu-buttons:hover {
     background-color: red;
+    color:white;
 }
 
 #header-button:hover {
