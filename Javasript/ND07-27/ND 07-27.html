@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="ND07-27.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+<body>
+
+<button type="button" name="naujas" value="Naujas" data-toggle="modal" class="btn btn-info btn-lg" data-target="#myModal">Modal</button>
+<br>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Auto Info</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" name="number" placeholder="Auto numeris" class="form-control" id="Number">
+                <br>
+                <input type="number" name="atstumas" placeholder="Atstumas (M)" class="form-control" id="Distance">
+                <br>
+                <input type="number" name="laikas" placeholder="Laikas (S)" class="form-control" id="Time">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick='New()' data-dismiss="modal">Saugoti</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<div id="ConfirmModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Patvirtinimas</h4>
+            </div>
+            <div class="modal-body">
+                <h1>Ar tikrai norit ištrint?</h1>
+                <button type="button" class="btn btn-default" onclick='DeleteRow()' data-dismiss="modal">Bazaras</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Ne</button>
+            </div>
+    </div>
+    </div>
+</div>
+
+<div id="FixModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Taisymas</h4>
+            </div>
+            <div class="modal-body">
+                <h1>Ką norit taisyt</h1>
+                <span>Numeris</span>
+                <input type="text" name="NumberFix" class="form-control" id="NumberFix">
+                <br>
+                <span>Atstumas</span>
+                <input type="number" name="DistanceFix" class="form-control" id="DistanceFix">
+                <br>
+                <span>Laikas</span>
+                <input type="number" name="TimeFix" class="form-control" id="TimeFix">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick='FixSave()' data-dismiss="modal">Saugot</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+             </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>Data / Laikas</th>
+        <th>Numeris</th>
+        <th>Atstumas (km)</th>
+        <th>Laikas (h)</th>
+        <th>Greitis (km / h)</th>
+    </tr>
+    </thead>
+    <tbody id="Tbody">
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="ND07-27.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+table, td, tr , th{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+
+
+th{
+    font-size: 15px;
+}
