@@ -20,14 +20,16 @@
                 <h4 class="modal-title">Auto Info</h4>
             </div>
             <div class="modal-body">
-                <input type="text" name="number" placeholder="Auto numeris" class="form-control" id="Number">
-                <br>
-                <input type="number" name="atstumas" placeholder="Atstumas (M)" class="form-control" id="Distance">
-                <br>
-                <input type="number" name="laikas" placeholder="Laikas (S)" class="form-control" id="Time">
+                <form id="NewInfo">
+                    <input type="text" name="number" placeholder="Auto numeris" class="form-control" id="Number">
+                    <br>
+                    <input type="number" name="atstumas" placeholder="Atstumas (M)" class="form-control" id="Distance">
+                    <br>
+                    <input type="number" name="laikas" placeholder="Laikas (S)" class="form-control" id="Time">
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick='New()' data-dismiss="modal">Saugoti</button>
+                <button type="button" class="btn btn-default" onclick='New(); clearInput()' data-dismiss="modal">Saugoti</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
             </div>
             </div>
@@ -83,23 +85,13 @@
     <tr>
         <th>Data / Laikas</th>
         <th>Numeris</th>
-        <th>Atstumas (km)</th>
-        <th>Laikas (h)</th>
-        <th>Greitis (km / h)</th>
+        <th>Atstumas (M)</th>
+        <th>Laikas (S)</th>
+        <th>Greitis (KM / H)</th>
     </tr>
     </thead>
     <tbody id="Tbody"></tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="ND07-27.js"></script>
 </body>
