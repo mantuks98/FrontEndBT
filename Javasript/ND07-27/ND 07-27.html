@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <form id="NewInfo">
-                    <input type="text" name="number" placeholder="Auto numeris" class="form-control" id="Number">
+                    <input type="text" name="number" placeholder="Auto numeris" maxlength="6" class="form-control" id="Number">
                     <br>
                     <input type="number" name="atstumas" placeholder="Atstumas (M)" class="form-control" id="Distance">
                     <br>
@@ -29,8 +29,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick='New(); clearInput()' data-dismiss="modal">Saugoti</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+                <button type="button" class="btn btn-lg btn-success" onclick='New(); clearInput()' data-dismiss="modal">Saugoti</button>
+                <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Atšaukti</button>
             </div>
             </div>
         </div>
@@ -45,8 +45,8 @@
             </div>
             <div class="modal-body">
                 <h1>Ar tikrai norit ištrint?</h1>
-                <button type="button" class="btn btn-default" onclick="deleteRow()" data-dismiss="modal">Bazaras</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Ne</button>
+                <button type="button" class="btn btn-sm btn-success" onclick="deleteRow()" data-dismiss="modal">Bazaras</button>
+                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Ne</button>
             </div>
     </div>
     </div>
@@ -62,7 +62,7 @@
             <div class="modal-body">
                 <h1>Ką norit taisyt</h1>
                 <span>Numeris</span>
-                <input type="text" name="NumberFix" class="form-control" id="NumberFix">
+                <input type="text" name="NumberFix" maxlength="6" class="form-control" id="NumberFix">
                 <br>
                 <span>Atstumas</span>
                 <input type="number" name="DistanceFix" class="form-control" id="DistanceFix">
@@ -72,8 +72,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick='FixSave()' data-dismiss="modal">Saugot</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
+                <button type="button" class="btn btn-sm btn-success" onclick='FixSave()' data-dismiss="modal">Saugot</button>
+                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Atšaukti</button>
             </div>
         </div>
     </div>

@@ -19,7 +19,6 @@ function fixed() {
 }
 
 function New() {
-    tbody.innerHTML = '';
     let number = document.getElementById("Number").value;
     let distance = document.getElementById("Distance").value;
     let time = document.getElementById("Time").value;
@@ -37,12 +36,12 @@ function New() {
 function date() {
     let date = new Date();
     let y = date.getFullYear();
-    let m = ("0" + date.getMonth()).slice(-1);
+    let m = ("0" + date.getMonth()).slice(-2);
     let day = ("0" + (date.getDay() + 1)).slice(-2);
     let h = ("0" + (date.getHours() + 1)).slice(-2);
     let min = ("0" + (date.getMinutes() + 1)).slice(-2);
     let s = ("0" + (date.getSeconds() + 1)).slice(-2);
-    return y + "-0" + m + "-" + day + " " + h + ":" + min + ":" + s;
+    return y +"-"+ m + "-" + day + " " + h + ":" + min + ":" + s;
 }
 
 function createDeleteBtn() {
