@@ -1,5 +1,3 @@
-
-
 $('button').click(function()
  {
      let input=document.getElementById("input").value;

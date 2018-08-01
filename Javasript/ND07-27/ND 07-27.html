@@ -10,7 +10,7 @@
    </head>
 <body>
 
-<button type="button" name="naujas" value="Naujas" data-toggle="modal" class="btn btn-info btn-lg" data-target="#myModal">Modal</button>
+<button type="button" name="naujas" value="Naujas" data-toggle="modal" class="btn btn-info btn-lg" data-target="#myModal">Naujas</button>
 <br>
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -43,7 +43,7 @@
             </div>
             <div class="modal-body">
                 <h1>Ar tikrai norit ištrint?</h1>
-                <button type="button" class="btn btn-default" onclick='DeleteRow()' data-dismiss="modal">Bazaras</button>
+                <button type="button" class="btn btn-default" onclick="deleteRow()" data-dismiss="modal">Bazaras</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Ne</button>
             </div>
     </div>
@@ -67,11 +67,12 @@
                 <br>
                 <span>Laikas</span>
                 <input type="number" name="TimeFix" class="form-control" id="TimeFix">
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" onclick='FixSave()' data-dismiss="modal">Saugot</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Atšaukti</button>
-             </div>
+            </div>
         </div>
     </div>
 </div>
@@ -87,9 +88,7 @@
         <th>Greitis (km / h)</th>
     </tr>
     </thead>
-    <tbody id="Tbody">
-
-    </tbody>
+    <tbody id="Tbody"></tbody>
 </table>
 
 
