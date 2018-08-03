@@ -1,0 +1,69 @@
+.electric-green {
+    color: #269abc;
+}
+
+.login {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a:link {
+    color: black;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid grey;
+}
+
+.left-border {
+    border-left: 2px solid black;
+    margin-left: 3px;
+}
+
+.shout {
+    background-color: lightseagreen;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.shout-button {
+    border-radius: 50px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    background-color: lightseagreen;
+    filter: brightness(80%);
+}
+
+footer {
+    background-color: #3c3c3c;
+    overflow: auto;
+}
+
+.foot-width {
+    width: 33.3%;
+    float: left;
+    padding: 20px;
+}
+
+.email-input {
+    position: relative;
+}
+
+.email-input-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.margin-top{
+    margin-top: 10px;
+}
