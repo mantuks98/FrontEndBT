@@ -14,6 +14,36 @@ ul.a {
     padding: 0;
 }
 
+#accordion > div > div > h4 > a {
+    text-decoration: none;
+    text-underline: none;
+    outline: none;
+}
+
+#accordion > div > div > h4 > button#a1:after {
+    content: "-";
+    float:right
+}
+#accordion > div > div > h4 > button#a2:after {
+    content: "+";
+    float:right
+}
+#accordion > div > div > h4 > button#a3:after {
+    content: "+";
+    float:right
+}
+
+#accordion > div > div > h4 > button.collapsed:after {
+    content: "+";
+    float:right
+}
+
+#accordion > div > div > h4 > button.acc:not(.collapsed):after {
+    content: "-";
+    float:right
+}
+
+
 li.a::before {
     color: white;
     background-color: red;
@@ -85,6 +115,19 @@ li.a::before {
     transition: 0.4s;
 }
 
+.accordion:after{
+    content: "+";
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+.accordion.active:after{
+    content: "-";
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+
 .margin-bottom-10{
     margin-bottom:10px;
 }
@@ -92,9 +135,6 @@ li.a::before {
 .border-radius-sm{
     border-radius: 5px;
 }
-
-
-
 
 
 

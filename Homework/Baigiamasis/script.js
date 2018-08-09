@@ -1,18 +1,9 @@
-let acc = document.getElementsByClassName("accordion");
-let i;
+let a1 = document.getElementById("a1");
+let a2 = document.getElementById("a2");
+let a3 = document.getElementById("a3");
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
-
-        /* Toggle between hiding and showing the active panel */
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
+function fix(){
+    a1.removeAttribute("id");
+    a2.removeAttribute("id");
+    a3.removeAttribute("id");
 }
