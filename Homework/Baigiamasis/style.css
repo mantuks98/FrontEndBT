@@ -134,11 +134,34 @@ li.a::before {
 .border-radius-sm{
     border-radius: 5px;
 }
+#CustomerInfo{
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
 
+#CustomerInfo > div > div {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
 
+#CustomerInfo > div > div > i,
+#CustomerInfo > div > div > h3{
+    font-size: 32px;
+    padding: 15px;
+}
 
+#CustomerInfo > div > div > p{
+    font-size: 22px;
+    padding: 15px;
+}
+#CustomerInfo > div > div > i{
+    color: #46b8da;
+}
 
-
+.cyan-bg{
+    background-color: #1ccdca;
+}
 
 .margin-right-30 {
     margin-right: 30px;
@@ -158,6 +181,10 @@ p {
     background-color: #f9fafc;
 }
 
+.gay-af-looking-bg-color{
+    background-color: #f9fafc;
+}
+
 .white-bg {
     background-color: white;
 }
@@ -169,8 +196,39 @@ p {
 .center-y {
     position: absolute;
     top: 20px;
-
 }
+
+#Services > div {
+    margin-bottom: 60px;
+}
+#Form >  form > div > input,
+#Form >  form > div > textarea{
+    width: 80%;
+    color: #324545;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+#Form >  form > div > textarea{
+    min-height: 200px;
+}
+
+#Form > form > div > .req:after {
+    content: " *";
+    color: red;
+}
+
+#Form > form > div{
+     margin-top: 27px;
+ }
+#Form > form > div > label{
+     line-height: 39px;
+ }
+#Form > form > .submit > input{
+     color: white;
+    font-weight: bold;
+ }
+
 
 .progress-info {
     height: 25px;
@@ -186,6 +244,11 @@ p {
 .padding-top-bot-40 {
     padding-bottom: 40px;
     padding-top: 40px;
+}
+
+.padding-top-bot-90{
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .progress-bar {
@@ -359,7 +422,7 @@ header {
 }
 
 .border-radius-full-pr {
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 .rotate180 {
