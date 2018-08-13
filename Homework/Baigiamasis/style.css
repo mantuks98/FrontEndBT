@@ -167,6 +167,41 @@ li.a::before {
    border: 1px solid #1ccdca;
 }
 
+#light-black-bg p{
+    color: #989898;
+}
+#author > div > img{
+    height: 120px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-top: -15px;
+}
+#author > div{
+    border-radius: 3px;
+    margin-top: 40px;
+    background-color: #ecf0f1;
+}
+#author > div > div > h5 > a{
+    color: grey;
+    font-weight: bold;
+    text-align: left;
+}
+#author > div > div > div{
+    color: grey;
+}
+#author > div > div > div > a{
+   font-size: 13px;
+    color:#777;
+    margin: 0 14px 0 0;
+}
+#author > div > div > div > a:hover,
+#author > div > div > h5 > a:hover{
+    outline: none;
+    text-decoration: none;
+    text-underline: none;
+    color: #1ccdca;
+}
+
 #dd > li.active > a,
 #dd > li.active > a:hover{
     border-radius: 0;
