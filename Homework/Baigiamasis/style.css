@@ -70,6 +70,9 @@ ul.a {
     border-radius: 5px;
 }
 
+#light-black-bg{
+    background-color: #191E21;
+}
 
 li.a::before {
     color: white;
@@ -86,6 +89,83 @@ li.a::before {
     line-height: 30px;
 }
 
+#light-black-bg > div > div > div > div > div > button > span:before{
+    content: "\203A";
+    font-size: 16px;
+    color: white;
+}
+#light-black-bg > div > div > div > div > div > .btn-1{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+#footer-search > button {
+    position: absolute;
+    right: 0;
+    padding: 3.2px 6px;
+    width: 15%;
+    border-radius: 0 5px 5px 0;
+}
+#footer-search > input {
+    width: 85%;
+    border-radius: 5px 0 0 5px;
+    padding-left: 20px;
+}
+
+#recent-posts > div > img{
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+#recent-posts > div{
+    margin-bottom: 10px;
+}
+#recent-posts > button{
+    border: 1px solid #1ccdca;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color:#1ccdca;
+}
+#recent-posts > button:before{
+    content: "\279C";
+    font-size: 13px;
+    color: #1ccdca;
+}
+#recent-posts > button:hover:after{
+    content: "\279C";
+    font-size: 13px;
+    color: #1ccdca;
+}
+
+#recent-posts > button:after{
+    content: "\279C";
+    font-size: 13px;
+    color:rgba(0, 0, 0, 0);
+}
+
+#recent-posts > button:hover:before{
+    content: "\279C";
+    font-size: 13px;
+    color:rgba(0, 0, 0, 0);
+
+}
+
+#Cloud-tags > div > button{
+    padding: 8px 9px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+    margin: 0 10px 10px 0;
+    border-radius: 3px;
+    color: #989898;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#Cloud-tags > div > button:hover{
+   border: 1px solid #1ccdca;
+}
 
 #dd > li.active > a,
 #dd > li.active > a:hover{
@@ -119,7 +199,21 @@ li.a::before {
     border-collapse: collapse;
 }
 
+.Flicker > div > a > img{
+    width: 140%;
+    padding: 0 7px 7px 0;
+}
 
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+.margin-top-15{
+    margin-top:15px;
+}
+
+.footer-padding{
+    padding: 35px 0 40px;
+}
 
 .border-l-r-b{
     border-bottom: 1px solid #e5e5e5;
@@ -157,6 +251,10 @@ li.a::before {
 }
 #CustomerInfo > div > div > i{
     color: #46b8da;
+}
+
+.footer-divider{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cyan-bg{
