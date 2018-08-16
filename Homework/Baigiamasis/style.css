@@ -8,6 +8,138 @@
     src: url('Fonts/OpenSans-Light.ttf');
 }
 
+
+
+footer{
+    background-color: #131619;
+    padding: 32px 0;
+    color: #989898;
+}
+footer span > a{
+    color: #1ccdca;
+}
+
+footer div > a{
+    padding: 0 8px;
+    color:#989898;
+    font-size: 12px;
+}
+footer div > a:hover{
+    color:#1ccdca;
+    outline: none;
+    text-decoration: none;
+}
+
+.c-text-1{
+    background-color: red;
+    position: absolute;
+    top: 150px;
+    font-size: 16px;
+    left: 200px;
+    color: white;
+}
+.c-text-1-1{
+    padding: 20px;
+}
+
+.c-button-1{
+    background-color: darkred;
+    font-size: 16px;
+    height: 100%;
+    border: none;
+    padding: 20px 10px;
+
+}
+.c-text-2{
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 210px;
+    left: 200px;
+    font-size:32px;
+    color: red;
+}
+.c-text-3{
+    background-color: black;
+    padding: 20px;
+    position: absolute;
+    top: 290px;
+    left: 200px;
+    font-size:16px;
+    color: white;
+}
+.c-button-shop{
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    font-size:16px;
+    color: #191E21;
+    border: none;
+}
+#Carousel-img span {
+    border-left: 1px solid red;
+}
+
+.line{
+    height: 1px;
+    background-color: #ebecee;
+    margin-bottom: 35px;
+    margin-top: 20px;
+
+}
+
+div > .topic:hover > .line > .line-active{
+    width: 70%;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #1cc6df;
+    margin-top: -6px;
+}
+
+.line-active{
+    height: 1px;
+    background-color: #1cc6df;
+    transition: 1s;
+}
+
+.grid:hover > div div > i{
+    color: white;
+}
+.grid:hover > div > div{
+    background-color: lightskyblue;
+    box-shadow: 0 0 0 0 lightskyblue;
+    transition: 0.35s;
+}
+.grid:hover > div > h4{
+    color: lightskyblue;
+}
+
+.transition-2{
+    transition: 2s;
+}
+.transition-05{
+    transition: .5s;
+}
+#Cloud-tags > div > button{
+    transition: .5s;
+}
+
+.box-shadow{
+    box-shadow: 1px 4px 6px 12px rgba(0,0,0,0);
+}
+
+iframe{
+    width: 250px;
+}
+
 ul.a {
     list-style: none;
     text-align: left;
@@ -89,16 +221,25 @@ li.a::before {
     line-height: 30px;
 }
 
-#light-black-bg > div > div > div > div > div > button > span:before{
+#light-black-bg > div div > button > span:before{
     content: "\203A";
     font-size: 16px;
     color: white;
 }
-#light-black-bg > div > div > div > div > div > .btn-1{
+#light-black-bg > div div > .btn-1:hover > span:before{
+    content: "\203A";
+    color: lightskyblue;
+    transition: .35s;
+}
+#light-black-bg > div div > .btn-1{
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
     color: white;
     padding: 10px 15px;
+}
+#light-black-bg > div div > .btn-1:hover > span{
+    transition: 2s;
+    color: lightskyblue;
 }
 
 #footer-search > button {
@@ -127,29 +268,68 @@ li.a::before {
     font-size: 13px;
     background-color: rgba(0, 0, 0, 0.2);
     color:#1ccdca;
+    transition: 0.5s;
 }
+#recent-posts > button:hover{
+    color: white;
+}
+
 #recent-posts > button:before{
     content: "\279C";
     font-size: 13px;
+    margin-right: 10px;
     color: #1ccdca;
+    transition: .2s;
+    animation: arrow-in-back .2s alternate;
+    animation-timing-function: ease-out;
+    position: relative;
 }
+#recent-posts > button:after{
+    content: "\279C";
+    font-size: 13px;
+    margin-left: 10px;
+    color:rgba(0, 0, 0, 0);
+    transition: .2s;
+    animation: arrow-out-back .2s alternate;
+    animation-timing-function: ease-out;
+    position: relative;
+}
+
 #recent-posts > button:hover:after{
     content: "\279C";
     font-size: 13px;
     color: #1ccdca;
-}
-
-#recent-posts > button:after{
-    content: "\279C";
-    font-size: 13px;
-    color:rgba(0, 0, 0, 0);
+    animation: arrow-out .2s alternate;
+    animation-timing-function: ease-in;
+    transition: 0.2s;
+    position: relative;
 }
 
 #recent-posts > button:hover:before{
     content: "\279C";
     font-size: 13px;
-    color:rgba(0, 0, 0, 0);
+    animation: arrow-in .2s alternate;
+    animation-timing-function: ease-out;
+    transition: 0.2s;
+    color: rgba(0,0,0,0);
+    position: relative;
+}
 
+@keyframes arrow-in {
+    to {left:10px;}
+    from{left:0;}
+}
+@keyframes arrow-out {
+    to {left:0;}
+    from{left:-10px;}
+}
+@keyframes arrow-in-back {
+    to {left:0;}
+    from{left:10px;}
+}
+@keyframes arrow-out-back {
+    to {left:-10px;}
+    from{left:0;}
 }
 
 #Cloud-tags > div > button{
@@ -167,12 +347,15 @@ li.a::before {
    border: 1px solid #1ccdca;
 }
 
+
+
+
 #light-black-bg p{
     color: #989898;
 }
-#author > div > img{
+#author > div > a > img{
     height: 120px;
-    padding-left: 15px;
+    padding-left: 5px;
     padding-bottom: 15px;
     margin-top: -15px;
 }
@@ -182,10 +365,14 @@ li.a::before {
     background-color: #ecf0f1;
 }
 #author > div > div > h5 > a{
-    color: grey;
     font-weight: bold;
     text-align: left;
+    transition: 1s;
 }
+.author:hover + div > h5 > a{
+    color: #1ccdca;
+}
+
 #author > div > div > div{
     color: grey;
 }
@@ -193,6 +380,7 @@ li.a::before {
    font-size: 13px;
     color:#777;
     margin: 0 14px 0 0;
+    transition: .5s;
 }
 #author > div > div > div > a:hover,
 #author > div > div > h5 > a:hover{
@@ -618,4 +806,10 @@ input {
 
 .padding-90 {
     padding: 90px;
+}
+.footer-menu > a:hover{
+    color: #1ccdca;
+}
+.footer-menu > a{
+    transition: 1s;
 }
