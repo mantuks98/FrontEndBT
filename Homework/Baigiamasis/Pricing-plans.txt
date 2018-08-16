@@ -4,7 +4,7 @@
     "active": false,
     "benefits": [
       {
-        "name": "Free setup",
+        "name": "Expensive setup 1",
         "status": 1
       },
       {
@@ -34,7 +34,7 @@
     "active": true,
     "benefits": [
       {
-        "name": "Free setup",
+        "name": "Expensive setup 2",
         "status": 1
       },
       {
@@ -64,7 +64,7 @@
     "active": false,
     "benefits": [
       {
-        "name": "Gay setup",
+        "name": "Expensive setup 3",
         "status": 1
       },
       {
@@ -72,7 +72,7 @@
         "status": 0
       },
       {
-        "name": "69GB storage",
+        "name": "55GB storage",
         "status": 1
       },
       {
@@ -86,7 +86,10 @@
       {
         "name": "Unlimited Subdomains",
         "status": 1
-      }
-    ]
+      },
+ {
+        "name": "lol Subdomains",
+        "status": 1
+      }   ]
   }
 ]

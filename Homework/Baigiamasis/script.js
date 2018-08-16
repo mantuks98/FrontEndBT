@@ -64,7 +64,7 @@ function loadDoc() {
     xhttp.open("GET", "Pricing-plans.txt", true);
 
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             let obj = JSON.parse(xhttp.responseText);
             obj.forEach(function(a){
                 let length = obj[0].benefits.length;
@@ -103,18 +103,23 @@ function loadDoc() {
                         info.setAttribute("class", "fals");
                         info.innerHTML=b.name;
                     }
-
                 });
+                let row = tbody.insertRow();
+                let info = row.insertCell();
+                info.style.border="1px solid green";
+                info.style.textAlign="center";
+                info.style.padding="15px";
+                let btn = document.createElement("button");
+                let img = document.createElement("span");
+                img.className += "fas ";
+                img.className += "fa-shopping-cart";
+                btn.appendChild(img);
+                let txt = document.createTextNode("  Order Now");
+                btn.appendChild(txt);
+                info.appendChild(btn);
             });
-
-
-
-
         }
     };
-
-
-
         xhttp.send();
 
 }
