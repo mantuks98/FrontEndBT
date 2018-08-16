@@ -111,6 +111,7 @@ function loadDoc() {
                 info.style.padding="15px";
                 let btn = document.createElement("button");
                 let img = document.createElement("span");
+                img.style.padding="10px";
                 img.className += "fas ";
                 img.className += "fa-shopping-cart";
                 btn.appendChild(img);
