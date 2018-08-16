@@ -62,56 +62,54 @@ function myMap() {
 function loadDoc() {
     let xhttp = new XMLHttpRequest();
     xhttp.open("GET", "Pricing-plans.txt", true);
-
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let obj = JSON.parse(xhttp.responseText);
             obj.forEach(function(a){
                 let length = obj[0].benefits.length;
                 let table = document.createElement("table");
-                table.setAttribute("class", "col-md-4");
-                table.style.width="30.33%";
-                table.style.marginRight="3%";
-
-
-
+                table.className += "col-md-4";
+                table.className += " margin-top-100";
                 plan.appendChild(table);
                 let th = document.createElement("thead");
+                if(a.active===true){
+                    th.className+= "price-head-active";
+                }
+                let div = document.createElement("div");
+                div.className+="hexagon";
+                div.className+=" center-block";
+                th.appendChild(div);
                 table.appendChild(th);
                 let headRow = th.insertRow();
                 let headInfo = headRow.insertCell();
                 headInfo.innerHTML=a.title;
-                headInfo.style.border="1px solid green";
-                headInfo.style.textAlign="center";
-                headInfo.style.padding="25px";
-
+                headInfo.appendChild(div);
+                headInfo.className += "price-head";
                 let tbody = document.createElement("tbody");
                 table.appendChild(tbody);
-
                 let benefits = a.benefits;
                 benefits.forEach(function(b){
                     let row = tbody.insertRow();
                     let info = row.insertCell();
-                    info.style.border="1px solid green";
-                    info.style.textAlign="center";
-                    info.style.padding="15px";
+                    info.className="price-info";
                     if (b.status === 1){
-                        info.setAttribute("class", "tru");
+                        info.className += " tru";
+                        info.className += " price-plan-color";
                         info.innerHTML=b.name;
                     }
                     if (b.status === 0){
-                        info.setAttribute("class", "fals");
+                        info.className += " fals";
+                        info.className += " price-plan-color";
                         info.innerHTML=b.name;
                     }
                 });
                 let row = tbody.insertRow();
                 let info = row.insertCell();
-                info.style.border="1px solid green";
-                info.style.textAlign="center";
-                info.style.padding="15px";
+                info.setAttribute("class", "price-info");
                 let btn = document.createElement("button");
+                btn.setAttribute("class", "price-btn");
                 let img = document.createElement("span");
-                img.style.padding="10px";
+                img.className += "price-btn-icon ";
                 img.className += "fas ";
                 img.className += "fa-shopping-cart";
                 btn.appendChild(img);
@@ -122,5 +120,4 @@ function loadDoc() {
         }
     };
         xhttp.send();
-
 }
