@@ -1,7 +1,9 @@
+window.onload=loadDoc();
 let a1 = document.getElementById("a1");
 let a2 = document.getElementById("a2");
 let a3 = document.getElementById("a3");
-
+let plan = document.getElementById("Plan");
+plan.setAttribute("class", "row");
 
 function fix() {
     a1.removeAttribute("id");
@@ -55,6 +57,64 @@ function myMap() {
     marker1.setMap(map);
     marker2.setMap(map);
     marker3.setMap(map);
+}
 
+function loadDoc() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "Pricing-plans.txt", true);
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let obj = JSON.parse(xhttp.responseText);
+            obj.forEach(function(a){
+                let length = obj[0].benefits.length;
+                let table = document.createElement("table");
+                table.setAttribute("class", "col-md-4");
+                table.style.width="30.33%";
+                table.style.marginRight="3%";
+
+
+
+                plan.appendChild(table);
+                let th = document.createElement("thead");
+                table.appendChild(th);
+                let headRow = th.insertRow();
+                let headInfo = headRow.insertCell();
+                headInfo.innerHTML=a.title;
+                headInfo.style.border="1px solid green";
+                headInfo.style.textAlign="center";
+                headInfo.style.padding="25px";
+
+                let tbody = document.createElement("tbody");
+                table.appendChild(tbody);
+
+                let benefits = a.benefits;
+                benefits.forEach(function(b){
+                    let row = tbody.insertRow();
+                    let info = row.insertCell();
+                    info.style.border="1px solid green";
+                    info.style.textAlign="center";
+                    info.style.padding="15px";
+                    if (b.status === 1){
+                        info.setAttribute("class", "tru");
+                        info.innerHTML=b.name;
+                    }
+                    if (b.status === 0){
+                        info.setAttribute("class", "fals");
+                        info.innerHTML=b.name;
+                    }
+
+                });
+            });
+
+
+
+
+        }
+    };
+
+
+
+        xhttp.send();
 
 }

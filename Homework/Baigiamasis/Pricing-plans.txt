@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Starter",
+    "active": false,
+    "benefits": [
+      {
+        "name": "Free setup",
+        "status": 1
+      },
+      {
+        "name": "50 websites",
+        "status": 0
+      },
+      {
+        "name": "55GB storage",
+        "status": 1
+      },
+      {
+        "name": "50GB Bandwitch",
+        "status": 1
+      },
+      {
+        "name": "9 months support",
+        "status": 0
+      },
+      {
+        "name": "Unlimited Subdomains",
+        "status": 1
+      }
+    ]
+  },
+  {
+    "title": "Standart",
+    "active": true,
+    "benefits": [
+      {
+        "name": "Free setup",
+        "status": 1
+      },
+      {
+        "name": "50 websites",
+        "status": 0
+      },
+      {
+        "name": "55GB storage",
+        "status": 1
+      },
+      {
+        "name": "50GB Bandwitch",
+        "status": 1
+      },
+      {
+        "name": "9 months support",
+        "status": 0
+      },
+      {
+        "name": "Unlimited Subdomains",
+        "status": 1
+      }
+    ]
+  },
+  {
+    "title": "Professional",
+    "active": false,
+    "benefits": [
+      {
+        "name": "Gay setup",
+        "status": 1
+      },
+      {
+        "name": "50 websites",
+        "status": 0
+      },
+      {
+        "name": "69GB storage",
+        "status": 1
+      },
+      {
+        "name": "50GB Bandwitch",
+        "status": 1
+      },
+      {
+        "name": "9 months support",
+        "status": 0
+      },
+      {
+        "name": "Unlimited Subdomains",
+        "status": 1
+      }
+    ]
+  }
+]
