@@ -25,14 +25,24 @@ $(document).ready(function(){
             wordpress.style.width="100%";
             joomla.style.width="40%";
             progressTitle.forEach(function(a){
-                a.className+=" progress-title-animation"
+                a.className+=" progress-title-animation";
             });
         }
     },false);
 
 });
 
-
+$('.progress-number').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 3500,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
 
 
 

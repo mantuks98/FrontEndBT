@@ -1044,34 +1044,26 @@ input {
     animation-timing-function: ease-in;
 }
 
-#progress-web{
+#progress-web, #progress-programming,
+#progress-htmlCss, #progress-wordpress,
+#progress-joomla{
     width:0;
     background-color: #0BACB8;
     transition: 3s;
     z-index: 55;
 }
 #progress-programming{
-    width:0;
     background-color: #3A94B2;
-    transition: 3s;
-    z-index: 55;
 }
 #progress-htmlCss{
-    width:0;
     background-color: #1ccdca;
-    transition: 3s;
-    z-index: 55;
 }
 #progress-wordpress{
-    width:0;
     background-color: #00C194;
-    transition: 3s;
-    z-index: 55;
 }
 #progress-joomla{
-    width:0;
     background-color: #E74C3C;
-    transition: 3s;
-    z-index: 55;
 }
-
+.progress-right > .progress-info > div > span:after{
+    content: "%";
+}
