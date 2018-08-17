@@ -76,18 +76,37 @@
 <!-------------Navigation---------------->
 
 <nav class="container-fluid">
-    <div class="container">
-        <div class="">
-            <ul class="list-inline navbar-nav">
+    <div class="container relative">
+            <ul class=" nav list-inline navbar-nav pull-left">
                 <li class="nav-logo">
                     <button class="header-button">
                         <img src="test_images/logo-dark.png">
                     </button>
                 </li>
-                <li>
-                    <button class="header-button font-12 nav-bar">
-                        <strong>HOME</strong>
+                <li class="dropdown">
+                    <button  class="header-button font-12 nav-bar dropdown-toggle" type="button" data-toggle="dropdown">
+                        <strong>
+                            HOME
+                        </strong>
                     </button>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">xddddd</a></li>
+                        <li><a tabindex="-1" href="#">ddddddd</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">ddddddddd<span class="caret rotate270"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="#">dddddddddddddddd</a></li>
+                                <li><a tabindex="-1" href="#">ddddddddddddddddddddddddddddd</a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="test" href="#">ddddddddddddddddddddddddddddddddddddd <span class="caret rotate270"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">ddddddddddddddddddddddddddddddddddddddd</a></li>
+                                        <li><a href="#">dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <button class="header-button font-12 nav-bar">
@@ -119,34 +138,34 @@
                         <strong>SHOP</strong>
                     </button>
                 </li>
-                <li class="margin-right-20">
+                <li>
                     <button class="header-button font-12 nav-bar">
                         <strong>TEAM</strong>
                     </button>
                 </li>
-                <!--------Nav-Search--------->
-                <li class="width-20 search margin-right-20">
-                    <div class="input-group borders border-radius-full">
-                        <div class="input-group-btn">
-                            <button class="header-button font-16">
-                                <i class="fas fa-search color-light-blue"></i>
-                            </button>
-                        </div>
-                        <input type="text" placeholder="Search Here..." class="padding no-borders width-90">
+            </ul>
+
+            <!--------Nav-Search--------->
+            <div class="row width-35 right-y">
+                <div class="input-group borders border-radius-full col-md-10 pull-left">
+                    <div class="input-group-btn">
+                        <button class="header-button font-16">
+                            <i class="fas fa-search color-light-blue"></i>
+                        </button>
                     </div>
-                </li>
+                    <input type="text" placeholder="Search Here..." class="padding no-borders width-90">
+                </div>
                 <!----------Nav-Shop--------->
-                <li class="margin-top-22">
+                <div class="col-md-2 pull-left">
                     <button id="shopping-cart" class="font-12 btn-default borders border-radius-full-pr">
                         <i id="lol" class="fas fa-shopping-cart color-gray"></i>
                         <span id="shop-cart-number" class="borders border-radius-full font-8">
                             4
                         </span>
                     </button>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
-    </div>
 </nav>
 
 <!-------------SLIDER-------------->
@@ -250,7 +269,7 @@
 
 <!-------------GRID AFTER SLIDER---------------->
 
-<div class="width-100">
+<div class="width-100" id="grid">
     <div class="grid-part-1">
         <div class="container text-center color-white nav-bar">
             <h3>
@@ -351,8 +370,8 @@
 
             <div class="margin-bottom-30">
                 <div class="progress" style="background-color:rgba(0, 0, 0, 0.3)">
-                    <div class="progress-bar relative" role="progressbar" aria-valuenow="80"
-                         aria-valuemin="0" aria-valuemax="100" style="width:80%; background-color:#0BACB8">
+                    <div class="progress-bar relative" id="progress-web" role="progressbar" aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100">
                     <span class="progress-title font-12">
                         WEB DESIGN
                     </span>
@@ -372,8 +391,8 @@
 
             <div class="margin-bottom-30">
                 <div class="progress" style="background-color:rgba(0, 0, 0, 0.3)">
-                    <div class="progress-bar relative" role="progressbar" aria-valuenow="60"
-                         aria-valuemin="0" aria-valuemax="100" style="width:60%; background-color:#3A94B2">
+                    <div class="progress-bar relative" id="progress-programming" role="progressbar" aria-valuenow="60"
+                         aria-valuemin="0" aria-valuemax="100">
                     <span class="progress-title font-12">
                         PROGRAMMING
                     </span>
@@ -393,8 +412,8 @@
 
             <div class="margin-bottom-30">
                 <div class="progress" style="background-color:rgba(0, 0, 0, 0.3)">
-                    <div class="progress-bar relative" role="progressbar" aria-valuenow="70"
-                         aria-valuemin="0" aria-valuemax="100" style="width:70%; background-color:#1ccdca">
+                    <div class="progress-bar relative" id="progress-htmlCss" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100">
                     <span class="progress-title font-12">
                         HTML/CSS
                     </span>
@@ -414,8 +433,8 @@
 
             <div class="margin-bottom-30">
                 <div class="progress" style="background-color:rgba(0, 0, 0, 0.3)">
-                    <div class="progress-bar relative" role="progressbar" aria-valuenow="100"
-                         aria-valuemin="0" aria-valuemax="100" style="width:100%; background-color:#00C194">
+                    <div class="progress-bar relative" id="progress-wordpress" role="progressbar" aria-valuenow="100"
+                         aria-valuemin="0" aria-valuemax="100">
                     <span class="progress-title font-12">
                         WORDPRESS
                     </span>
@@ -434,8 +453,8 @@
             <!-------JOOMLA-------->
 
             <div class="progress" style="background-color:rgba(0, 0, 0, 0.3)">
-                <div class="progress-bar relative" role="progressbar" aria-valuenow="40"
-                     aria-valuemin="0" aria-valuemax="40" style="width:40%; background-color:#E74C3C">
+                <div class="progress-bar relative" id="progress-joomla" role="progressbar" aria-valuenow="40"
+                     aria-valuemin="0" aria-valuemax="40">
                     <span class="progress-title font-12">
                         JOOMLA
                     </span>

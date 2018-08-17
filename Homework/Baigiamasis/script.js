@@ -4,6 +4,53 @@ let a2 = document.getElementById("a2");
 let a3 = document.getElementById("a3");
 let plan = document.getElementById("Plan");
 plan.setAttribute("class", "row");
+let y = window.scrollY;
+let web = document.getElementById("progress-web");
+let programming = document.getElementById("progress-programming");
+let htmlCss = document.getElementById("progress-htmlCss");
+let wordpress = document.getElementById("progress-wordpress");
+let joomla = document.getElementById("progress-joomla");
+let progressTitle = document.querySelectorAll(".progress-title");
+
+$(document).ready(function(){
+    let y = $("#grid").offset();
+    let x = $("#skills-bg").offset();
+    console.log("Top: " + x.top);
+
+    window.addEventListener("scroll", function(){
+        if(window.pageYOffset > y.top && window.pageYOffset < x.top){
+            web.style.width="80%";
+            programming.style.width="60%";
+            htmlCss.style.width="70%";
+            wordpress.style.width="100%";
+            joomla.style.width="40%";
+            progressTitle.forEach(function(a){
+                a.className+=" progress-title-animation"
+            });
+        }
+    },false);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
+});
 
 function fix() {
     a1.removeAttribute("id");
