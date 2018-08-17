@@ -1,8 +1,8 @@
 [
   {
-    "title": "Starter",
+    "title": "Sthhhhhhh",
     "active": false,
-    "benefits": [
+ "users":{ "number":573, "monthly":1} ,   "benefits": [
       {
         "name": "Expensive setup 1",
         "status": 1
@@ -32,7 +32,7 @@
   {
     "title": "Standart",
     "active": true,
-    "benefits": [
+ "users":{ "number":234, "monthly":1} ,   "benefits": [
       {
         "name": "Expensive setup 2",
         "status": 1
@@ -56,13 +56,12 @@
       {
         "name": "Unlimited Subdomains",
         "status": 1
-      }
-    ]
+       }  ]
   },
   {
     "title": "Professional",
     "active": false,
-    "benefits": [
+ "users":{ "number":1234, "monthly":1} ,   "benefits": [
       {
         "name": "Expensive setup 3",
         "status": 1

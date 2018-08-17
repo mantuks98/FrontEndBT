@@ -72,44 +72,58 @@
     background-color: black;
     border: 2px solid black;
 }
-
-
+.monthly{
+    z-index: 599;
+    font-size: 19px;
+}
+.monthly-users{
+    font-size: 14px;
+}
+.price-head > .hexagon > span{
+    color: #1ccdca;
+}
 
 .hexagon {
     position: relative;
     width: 75px;
     height: 43.30px;
-    background-color: #ffffff;
     margin: 21.65px 0;
-    border-left: solid 2px #8080ff;
-    border-right: solid 2px #8080ff;
+    border-left: solid 2px #1ccdca;
+    border-right: solid 2px #1ccdca;
     margin-top: -100px;
+    background-color: white;
+    z-index: 1;
 }
 
 .hexagon:before,
 .hexagon:after {
     content: "";
     position: absolute;
-    z-index: 1;
     width: 53.03px;
     height: 53.03px;
     -webkit-transform: scaleY(0.5774) rotate(-45deg);
     -ms-transform: scaleY(0.5774) rotate(-45deg);
     transform: scaleY(0.5774) rotate(-45deg);
-    background-color: inherit;
     left: 8.9835px;
+    background-color: white;
+    z-index: -1;
 }
 
 .hexagon:before {
     top: -26.5165px;
-    border-top: solid 2.8284px #8080ff;
-    border-right: solid 2.8284px #8080ff;
+    border-top: solid 2.8284px #1ccdca;
+    border-right: solid 2.8284px #1ccdca;
+    background-color: white;
+    z-index: -1;
 }
 
 .hexagon:after {
     bottom: -26.5165px;
-    border-bottom: solid 2.8284px #8080ff;
-    border-left: solid 2.8284px #8080ff;
+    border-bottom: solid 2.8284px #1ccdca;
+    border-left: solid 2.8284px #1ccdca;
+    background-color: white;
+    z-index: -1;
+
 }
 
 

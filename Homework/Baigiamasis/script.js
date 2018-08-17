@@ -78,6 +78,18 @@ function loadDoc() {
                 let div = document.createElement("div");
                 div.className+="hexagon";
                 div.className+=" center-block";
+                let span2 = document.createElement("span");
+                let span = document.createElement("span");
+                let monthly = document.createTextNode("MONTHLY");
+                span2.appendChild(monthly);
+                span.innerHTML=a.users.number;
+                span2.className+="monthly-users";
+                span.className+="monthly";
+                div.appendChild(span);
+                if(a.users.monthly === 1){
+                    div.innerHTML+="<br>";
+                    div.appendChild(span2);
+                }
                 th.appendChild(div);
                 table.appendChild(th);
                 let headRow = th.insertRow();
@@ -88,6 +100,7 @@ function loadDoc() {
                 let tbody = document.createElement("tbody");
                 table.appendChild(tbody);
                 let benefits = a.benefits;
+
                 benefits.forEach(function(b){
                     let row = tbody.insertRow();
                     let info = row.insertCell();
