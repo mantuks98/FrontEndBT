@@ -20,18 +20,18 @@
     color: red;
 }
 
-.dropdown-submenu .dropdown-menu{
+.dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
 }
-.dropdown{
+
+.dropdown {
     top: -0.5px;
 }
 
-.rotate270{
+.rotate270 {
     transform: rotate(270deg);
 }
-
 
 .margin-top-100 {
     margin-top: 100px;
@@ -523,9 +523,6 @@ li.a::before {
         left: 0;
     }
 }
-
-
-
 
 #Cloud-tags > div > button {
     padding: 8px 9px;
@@ -1026,7 +1023,6 @@ input {
     transition: 1s;
 }
 
-
 @keyframes progress-topic {
     to {
         left: 15px;
@@ -1036,7 +1032,7 @@ input {
     }
 }
 
-.progress-title-animation{
+.progress-title-animation {
     position: absolute;
     left: 15px;
     top: 7px;
@@ -1046,24 +1042,29 @@ input {
 
 #progress-web, #progress-programming,
 #progress-htmlCss, #progress-wordpress,
-#progress-joomla{
-    width:0;
+#progress-joomla {
+    width: 0;
     background-color: #0BACB8;
     transition: 3s;
     z-index: 55;
 }
-#progress-programming{
+
+#progress-programming {
     background-color: #3A94B2;
 }
-#progress-htmlCss{
+
+#progress-htmlCss {
     background-color: #1ccdca;
 }
-#progress-wordpress{
+
+#progress-wordpress {
     background-color: #00C194;
 }
-#progress-joomla{
+
+#progress-joomla {
     background-color: #E74C3C;
 }
-.progress-right > .progress-info > div > span:after{
+
+.progress-right > .progress-info > div > span:after {
     content: "%";
 }

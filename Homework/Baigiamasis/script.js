@@ -1,61 +1,73 @@
-window.onload=loadDoc();
+window.onload = loadDoc();
 let a1 = document.getElementById("a1");
 let a2 = document.getElementById("a2");
 let a3 = document.getElementById("a3");
 let plan = document.getElementById("Plan");
 plan.setAttribute("class", "row");
-let y = window.scrollY;
 let web = document.getElementById("progress-web");
 let programming = document.getElementById("progress-programming");
 let htmlCss = document.getElementById("progress-htmlCss");
 let wordpress = document.getElementById("progress-wordpress");
 let joomla = document.getElementById("progress-joomla");
 let progressTitle = document.querySelectorAll(".progress-title");
+let i = 0;
+let p = 0;
 
-$(document).ready(function(){
-    let y = $("#grid").offset();
-    let x = $("#skills-bg").offset();
-    console.log("Top: " + x.top);
-
-    window.addEventListener("scroll", function(){
-        if(window.pageYOffset > y.top && window.pageYOffset < x.top){
-            web.style.width="80%";
-            programming.style.width="60%";
-            htmlCss.style.width="70%";
-            wordpress.style.width="100%";
-            joomla.style.width="40%";
-            progressTitle.forEach(function(a){
-                a.className+=" progress-title-animation";
+$(document).ready(function () {
+    let yStart = $("#grid").offset();
+    let yFinish = $("#skills-bg").offset();
+    let y2Start = $("#chose-about-bg").offset();
+    let y2Finish = $("#Team").offset();
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > yStart.top && window.pageYOffset < yFinish.top) {
+            web.style.width = "80%";
+            programming.style.width = "60%";
+            htmlCss.style.width = "70%";
+            wordpress.style.width = "100%";
+            joomla.style.width = "40%";
+            while (i === 0) {
+                $('.progress-number').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 3500,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        },
+                        // šito dalyko reikėjo, nes be jo pasibaigus funkcija gražindavo skaičius
+                        // iki 1 po to vėl pakildavo iki reikiamų nustaymų ir vėl grįždavo ir t.t
+                        done: i = 1
+                    });
+                });
+            }
+            progressTitle.forEach(function (a) {
+                a.className += " progress-title-animation";
             });
         }
-    },false);
-
-});
-
-$('.progress-number').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 3500,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
+        if (window.pageYOffset > y2Start.top && window.pageYOffset < y2Finish.top) {
+            while (p === 0) {
+                $('.info-numbers').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 3500,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        },
+                        done: p = 1
+                    });
+                });
+            }
         }
-    });
+    }, false);
+
 });
 
 
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
-    $('.dropdown-submenu a.test').on("click", function(e){
+$(document).ready(function () {
+    $('.dropdown-submenu a.test').on("click", function (e) {
         $(this).next('ul').toggle();
         e.stopPropagation();
         e.preventDefault();
@@ -122,55 +134,55 @@ function loadDoc() {
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let obj = JSON.parse(xhttp.responseText);
-            obj.forEach(function(a){
+            obj.forEach(function (a) {
                 let length = obj[0].benefits.length;
                 let table = document.createElement("table");
                 table.className += "col-md-4";
                 table.className += " margin-top-100";
                 plan.appendChild(table);
                 let th = document.createElement("thead");
-                if(a.active===true){
-                    th.className+= "price-head-active";
+                if (a.active === true) {
+                    th.className += "price-head-active";
                 }
                 let div = document.createElement("div");
-                div.className+="hexagon";
-                div.className+=" center-block";
+                div.className += "hexagon";
+                div.className += " center-block";
                 let span2 = document.createElement("span");
                 let span = document.createElement("span");
                 let monthly = document.createTextNode("MONTHLY");
                 span2.appendChild(monthly);
-                span.innerHTML=a.users.number;
-                span2.className+="monthly-users";
-                span.className+="monthly";
+                span.innerHTML = a.users.number;
+                span2.className += "monthly-users";
+                span.className += "monthly";
                 div.appendChild(span);
-                if(a.users.monthly === 1){
-                    div.innerHTML+="<br>";
+                if (a.users.monthly === 1) {
+                    div.innerHTML += "<br>";
                     div.appendChild(span2);
                 }
                 th.appendChild(div);
                 table.appendChild(th);
                 let headRow = th.insertRow();
                 let headInfo = headRow.insertCell();
-                headInfo.innerHTML=a.title;
+                headInfo.innerHTML = a.title;
                 headInfo.appendChild(div);
                 headInfo.className += "price-head";
                 let tbody = document.createElement("tbody");
                 table.appendChild(tbody);
                 let benefits = a.benefits;
 
-                benefits.forEach(function(b){
+                benefits.forEach(function (b) {
                     let row = tbody.insertRow();
                     let info = row.insertCell();
-                    info.className="price-info";
-                    if (b.status === 1){
+                    info.className = "price-info";
+                    if (b.status === 1) {
                         info.className += " tru";
                         info.className += " price-plan-color";
-                        info.innerHTML=b.name;
+                        info.innerHTML = b.name;
                     }
-                    if (b.status === 0){
+                    if (b.status === 0) {
                         info.className += " fals";
                         info.className += " price-plan-color";
-                        info.innerHTML=b.name;
+                        info.innerHTML = b.name;
                     }
                 });
                 let row = tbody.insertRow();
@@ -189,5 +201,5 @@ function loadDoc() {
             });
         }
     };
-        xhttp.send();
+    xhttp.send();
 }
