@@ -3,7 +3,8 @@ let a1 = document.getElementById("a1");
 let a2 = document.getElementById("a2");
 let a3 = document.getElementById("a3");
 let plan = document.getElementById("Plan");
-plan.setAttribute("class", "row");
+plan.className+="row";
+plan.className+=" center-block";
 let web = document.getElementById("progress-web");
 let programming = document.getElementById("progress-programming");
 let htmlCss = document.getElementById("progress-htmlCss");
@@ -135,11 +136,14 @@ function loadDoc() {
         if (this.readyState === 4 && this.status === 200) {
             let obj = JSON.parse(xhttp.responseText);
             obj.forEach(function (a) {
-                let length = obj[0].benefits.length;
+                let block = document.createElement("div");
                 let table = document.createElement("table");
-                table.className += "col-md-4";
-                table.className += " margin-top-100";
-                plan.appendChild(table);
+                block.appendChild(table);
+                table.className += "width-100";
+                block.className += "col-md-4";
+                block.className += " center-block";
+                block.className += " margin-top-100";
+                plan.appendChild(block);
                 let th = document.createElement("thead");
                 if (a.active === true) {
                     th.className += "price-head-active";
